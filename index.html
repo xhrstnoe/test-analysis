@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Item and Distractor Analysis Calculator</title>
+  <title>Item and Distractor Analysis Calculator — DepEd Psychometric Edition</title>
 
   <!-- Instant Theme Application Before First Paint (Zero FOUC) -->
   <script>
@@ -59,71 +59,83 @@
 
   <style>
     /* ===================================================================== */
-    /* 1. PURPOSE-MAPPED, COMPLEMENTARY GRADIENT SYSTEM                      */
+    /* 1. MULTI-STOP HARMONIOUS GRADIENTS & FLUID MOTION CURVES              */
     /* ===================================================================== */
     :root {
-      --ease-silky: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-silky: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       overflow-x: hidden;
-      transition: background 0.35s var(--ease-silky), color 0.3s var(--ease-silky);
+      transition: background 0.45s var(--ease-silky), color 0.35s var(--ease-silky);
     }
 
-    /* Role A: Ambient Page Background Canvas (Soft Complementary Indigo-Teal Wash) */
+    /* Role A: Multi-Stop Silk Ambient Page Background Canvas */
     .grad-bg-canvas {
-      background: linear-gradient(135deg, #f1f5f9 0%, #eef2ff 52%, #f0fdfa 100%);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(99, 102, 241, 0.08), transparent 42%),
+        radial-gradient(circle at 88% 85%, rgba(20, 184, 166, 0.08), transparent 44%),
+        linear-gradient(135deg, #f8fafc 0%, #eef2ff 38%, #ecfeff 72%, #f0fdfa 100%);
+      background-attachment: fixed;
     }
     .dark .grad-bg-canvas {
-      background: linear-gradient(135deg, #020617 0%, #0f172a 55%, #042f2e 100%);
+      background:
+        radial-gradient(circle at 15% 12%, rgba(79, 70, 229, 0.16), transparent 45%),
+        radial-gradient(circle at 85% 88%, rgba(13, 148, 136, 0.14), transparent 48%),
+        linear-gradient(135deg, #020617 0%, #0b1121 40%, #0f172a 72%, #042f2e 100%);
+      background-attachment: fixed;
     }
 
-    /* Role B: Interactive Selection / Active Pill & Choice Gradient (Royal Indigo -> Violet) */
+    /* Role B: Interactive Selection / Active Pill & Choice Gradient */
     .grad-select-pill {
-      background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+      background: linear-gradient(135deg, #4338ca 0%, #5b21b6 50%, #7c3aed 100%);
       color: #ffffff !important;
-      border-color: rgba(167, 139, 250, 0.55) !important;
-      box-shadow: 0 8px 20px -6px rgba(79, 70, 229, 0.48);
+      border-color: rgba(196, 181, 253, 0.55) !important;
+      box-shadow: 0 10px 24px -6px rgba(79, 70, 229, 0.46), inset 0 1px 0 rgba(255, 255, 255, 0.18);
     }
     .grad-select-pill:hover {
-      background: linear-gradient(135deg, #3730a3 0%, #5b21b6 100%);
+      background: linear-gradient(135deg, #3730a3 0%, #4c1d95 50%, #6d28d9 100%);
+      box-shadow: 0 12px 26px -5px rgba(79, 70, 229, 0.56), inset 0 1px 0 rgba(255, 255, 255, 0.25);
     }
 
-    /* Role C: Primary Action / CTA, Emblems & Sticky Table Headers (Deep Navy -> Sapphire -> Teal) */
+    /* Role C: Primary Action / CTA, Emblems & Sticky Table Headers */
     .grad-action-cta,
     .grad-thead {
-      background: linear-gradient(135deg, #1e1b4b 0%, #1d4ed8 55%, #0d9488 100%);
+      background: linear-gradient(135deg, #1e1b4b 0%, #1e40af 38%, #0284c7 72%, #0d9488 100%);
       color: #ffffff !important;
-      border-color: rgba(45, 212, 191, 0.42) !important;
+      border-color: rgba(45, 212, 191, 0.45) !important;
+      box-shadow: 0 10px 24px -8px rgba(13, 148, 136, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.16);
     }
     .grad-action-cta:hover {
-      filter: brightness(1.07);
-      transform: translateY(-1px);
+      filter: brightness(1.06);
+      transform: translateY(-1.5px);
+      box-shadow: 0 14px 28px -7px rgba(13, 148, 136, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.24);
     }
 
     /* Role D: Data Visualization & Progress Bar Gradients */
     .grad-progress {
-      background: linear-gradient(90deg, #4338ca 0%, #2563eb 52%, #0d9488 100%);
+      background: linear-gradient(90deg, #4f46e5 0%, #2563eb 36%, #0891b2 70%, #0d9488 100%);
     }
     .grad-bar-p {
-      background: linear-gradient(180deg, #6366f1 0%, #4338ca 100%);
+      background: linear-gradient(180deg, #818cf8 0%, #4f46e5 55%, #3730a3 100%);
     }
     .grad-bar-d-good {
-      background: linear-gradient(180deg, #10b981 0%, #047857 100%);
+      background: linear-gradient(180deg, #34d399 0%, #10b981 55%, #047857 100%);
     }
     .grad-bar-d-fair {
-      background: linear-gradient(180deg, #f59e0b 0%, #b45309 100%);
+      background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 55%, #b45309 100%);
     }
     .grad-bar-d-poor {
-      background: linear-gradient(180deg, #f43f5e 0%, #be123c 100%);
+      background: linear-gradient(180deg, #fb7185 0%, #f43f5e 55%, #be123c 100%);
     }
     .grad-bar-rpbis {
-      background: linear-gradient(180deg, #06b6d4 0%, #0369a1 100%);
+      background: linear-gradient(180deg, #22d3ee 0%, #06b6d4 55%, #0369a1 100%);
     }
 
     /* ===================================================================== */
-    /* 2. 100% CONTRAST-ADAPTIVE TEXT ACROSS LIGHT / DARK & GRADIENTS        */
+    /* 2. 100% CONTRAST-ADAPTIVE TEXT & SMART WORD-WRAP / HYPHENATION        */
     /* ===================================================================== */
     .on-gradient-text,
     .on-gradient-text * {
@@ -131,103 +143,120 @@
       text-shadow: 0 1px 2px rgba(2, 6, 23, 0.28);
     }
 
-    .surface-text-primary {
-      color: #0f172a;
-    }
-    .dark .surface-text-primary {
-      color: #f8fafc;
-    }
+    .surface-text-primary { color: #0f172a; }
+    .dark .surface-text-primary { color: #f8fafc; }
 
-    .surface-text-secondary {
-      color: #334155;
-    }
-    .dark .surface-text-secondary {
-      color: #cbd5e1;
-    }
+    .surface-text-secondary { color: #334155; }
+    .dark .surface-text-secondary { color: #cbd5e1; }
 
-    .surface-text-muted {
-      color: #64748b;
-    }
-    .dark .surface-text-muted {
-      color: #94a3b8;
+    .surface-text-muted { color: #64748b; }
+    .dark .surface-text-muted { color: #94a3b8; }
+
+    /* Adaptive multi-orientation wrapping: keeps multi-word phrases intact per word,
+       and hyphenates single long words cleanly with a dash (-) only when wider than container */
+    .adaptive-wrap {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: normal;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
     }
 
     /* ===================================================================== */
-    /* 3. SQUIRCLE GLASSMORPHISM & ULTRA-SMOOTH ANIMATIONS                   */
+    /* 3. SQUIRCLE GLASSMORPHISM & BUTTERY-SMOOTH ANIMATIONS                 */
     /* ===================================================================== */
     .squircle-card { border-radius: 1.5rem; }
     .squircle-control { border-radius: 1rem; }
     .squircle-sm { border-radius: 0.65rem; }
 
+    .squircle-badge-adaptive {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.35rem 0.65rem;
+      border-radius: 0.75rem;
+      text-align: center;
+      line-height: 1.25;
+      overflow-wrap: break-word;
+      word-break: normal;
+      hyphens: auto;
+    }
+
     .glass-panel {
       background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(203, 213, 225, 0.85);
-      box-shadow: 0 12px 32px -10px rgba(15, 23, 42, 0.08);
-      transition: background-color 0.3s var(--ease-silky), border-color 0.3s var(--ease-silky), box-shadow 0.3s var(--ease-silky);
+      box-shadow: 0 14px 36px -12px rgba(15, 23, 42, 0.08);
+      transition: background-color 0.35s var(--ease-silky), border-color 0.35s var(--ease-silky), box-shadow 0.35s var(--ease-silky), transform 0.35s var(--ease-silky);
     }
     .dark .glass-panel {
       background: rgba(15, 23, 42, 0.84);
       border: 1px solid rgba(51, 65, 85, 0.78);
-      box-shadow: 0 16px 38px -12px rgba(2, 6, 23, 0.58);
+      box-shadow: 0 18px 42px -12px rgba(2, 6, 23, 0.6);
     }
 
     .glass-subcard {
       background: rgba(248, 250, 252, 0.88);
       border: 1px solid rgba(203, 213, 225, 0.82);
-      transition: background-color 0.28s var(--ease-silky), border-color 0.28s var(--ease-silky), transform 0.28s var(--ease-silky);
+      transition: background-color 0.32s var(--ease-silky), border-color 0.32s var(--ease-silky), transform 0.32s var(--ease-silky), box-shadow 0.32s var(--ease-silky);
     }
     .dark .glass-subcard {
-      background: rgba(30, 41, 59, 0.66);
+      background: rgba(30, 41, 59, 0.68);
       border: 1px solid rgba(71, 85, 105, 0.68);
+    }
+    .glass-subcard:hover {
+      border-color: rgba(99, 102, 241, 0.42);
     }
 
     .silky-btn {
-      transition: transform 0.25s var(--ease-silky), background 0.28s var(--ease-silky), border-color 0.25s var(--ease-silky), box-shadow 0.28s var(--ease-silky), color 0.25s var(--ease-silky);
+      transition: transform 0.28s var(--ease-spring), background 0.32s var(--ease-silky), border-color 0.28s var(--ease-silky), box-shadow 0.32s var(--ease-silky), color 0.28s var(--ease-silky), filter 0.28s var(--ease-silky);
       will-change: transform;
     }
+    .silky-btn:hover {
+      transform: translateY(-1px);
+    }
     .silky-btn:active {
-      transform: scale(0.97);
+      transform: scale(0.96);
     }
 
     .silky-bar {
-      transition: height 0.52s var(--ease-silky), width 0.52s var(--ease-silky), opacity 0.3s var(--ease-silky);
+      transition: height 0.62s var(--ease-silky), width 0.62s var(--ease-silky), opacity 0.35s var(--ease-silky), transform 0.35s var(--ease-silky);
       will-change: height, width;
     }
 
     @keyframes workspaceFadeSlide {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(10px) scale(0.992); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
     .animate-workspace-enter {
-      animation: workspaceFadeSlide 0.36s var(--ease-silky) both;
+      animation: workspaceFadeSlide 0.42s var(--ease-silky) both;
     }
 
     @keyframes modalSpringIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95) translateY(8px);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
+      from { opacity: 0; transform: scale(0.93) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
     }
     .animate-modal-spring {
-      animation: modalSpringIn 0.32s var(--ease-silky) both;
+      animation: modalSpringIn 0.36s var(--ease-spring) both;
     }
 
-    .compact-title { line-height: 1.25; letter-spacing: -0.015em; }
-    .compact-th { line-height: 1.2; }
+    .compact-title {
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      overflow-wrap: break-word;
+      word-break: normal;
+      hyphens: auto;
+    }
+    .compact-th {
+      line-height: 1.2;
+      overflow-wrap: break-word;
+      word-break: normal;
+      hyphens: auto;
+    }
 
-    /* Preloader Progress Bar Animation */
     @keyframes preloaderSlide {
       0% { transform: translateX(-100%); }
       50% { transform: translateX(0%); }
@@ -237,7 +266,6 @@
       animation: preloaderSlide 0.9s var(--ease-silky) infinite;
     }
 
-    /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 7px; height: 7px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.45); border-radius: 9999px; }
@@ -306,10 +334,10 @@
     }
   </style>
 </head>
-<body class="min-h-screen grad-bg-canvas surface-text-primary">
+<body class="min-h-screen grad-bg-canvas surface-text-primary adaptive-wrap">
 
   <!-- ===================================================================== -->
-  <!-- GLASSMORPHIC SPLASH PRELOADER (Snappy Dismissal + Failsafe)           -->
+  <!-- GLASSMORPHIC SPLASH PRELOADER                                         -->
   <!-- ===================================================================== -->
   <div id="appPreloader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-100/95 dark:bg-slate-950/95 backdrop-blur-xl transition-opacity duration-300">
     <div class="glass-panel squircle-card p-7 sm:p-8 max-w-sm w-[90%] text-center space-y-4">
@@ -378,22 +406,22 @@
     <!-- =================================================================== -->
     <header class="glass-panel squircle-card p-4 sm:p-6 no-print">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-        <div class="flex items-start sm:items-center gap-3.5">
+        <div class="flex items-start sm:items-center gap-3.5 min-w-0">
           <div class="w-12 h-12 squircle-control grad-action-cta on-gradient-text border flex items-center justify-center text-xl shadow-md shrink-0">
             <i class="fa-solid fa-chart-column"></i>
           </div>
-          <div>
+          <div class="min-w-0">
             <h1 class="compact-title text-lg sm:text-2xl font-black surface-text-primary">
               Item and Distractor Analysis Calculator
             </h1>
-            <p class="text-xs sm:text-sm surface-text-secondary mt-0.5">
+            <p class="text-xs sm:text-sm surface-text-secondary mt-0.5 adaptive-wrap">
               27% Kelley Rule • P<sub>U</sub> / P<sub>L</sub> • Point-Biserial (r<sub>pbis</sub>) • Bistractor Analysis • DepEd MPS &amp; DO 015, s. 2026 Mastery Bands
             </p>
           </div>
         </div>
 
         <!-- Global Toolbar Buttons -->
-        <div class="flex flex-wrap items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2 shrink-0">
           <button type="button" onclick="toggleTheme()" class="silky-btn px-3.5 py-2.5 squircle-control glass-subcard hover:border-indigo-500/60 text-xs font-bold surface-text-primary flex items-center gap-2 cursor-pointer" title="Palitan ang Tema (Light / Dark)">
             <i id="themeToggleIcon" class="fa-solid fa-moon text-indigo-600 dark:text-amber-400"></i>
             <span id="themeToggleText">Dark Mode</span>
@@ -466,7 +494,7 @@
             <input type="number" id="metaTotalN" min="0" oninput="handleMetaChange()" placeholder="Auto / Manual" class="w-full px-3.5 py-2.5 squircle-control glass-subcard surface-text-primary text-xs sm:text-sm font-mono font-bold outline-none focus:ring-2 focus:ring-indigo-500" />
           </div>
 
-          <!-- Uri ng Pagsusulit: Single-Format vs Mixed-Format (Selection Gradient Role) -->
+          <!-- Uri ng Pagsusulit: Single-Format vs Mixed-Format -->
           <div class="lg:col-span-4">
             <label class="block text-[11px] font-extrabold uppercase tracking-wider surface-text-secondary mb-1">
               Uri ng Pagsusulit
@@ -489,7 +517,7 @@
               </label>
               <select id="metaPrimaryFormat" onchange="handleSingleFormatPrimaryChange()" class="w-full px-3.5 py-2.5 squircle-control glass-subcard surface-text-primary text-xs sm:text-sm font-bold outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
                 <option value="mc">Multiple Choice</option>
-                <option value="tf">True or False</option>
+                <option value="tf">True or False (T/F o T/M)</option>
                 <option value="mt">Matching Type</option>
                 <option value="id">Identification</option>
               </select>
@@ -497,7 +525,7 @@
 
             <div id="mixedFormatNoteWrap" class="hidden px-3.5 py-2 squircle-control bg-indigo-500/10 border border-indigo-500/35 text-[11px] text-indigo-950 dark:text-indigo-200 leading-snug">
               <i class="fa-solid fa-circle-info text-indigo-600 dark:text-indigo-400 mr-1"></i>
-              <strong>Mixed-Format:</strong> Itakda ang bawat bahagi (hal. <em>Mula Aytem 1 hanggang Aytem 20</em>) sa <strong>Tab 2 (Hakbang 1)</strong>.
+              <strong>Mixed-Format:</strong> Itakda ang bawat bahagi (hal. <em>Mula Aytem 1 hanggang Aytem 20</em>) sa <strong>Tab 1</strong> sa ibaba.
             </div>
           </div>
         </div>
@@ -505,50 +533,50 @@
     </header>
 
     <!-- =================================================================== -->
-    <!-- WORKSPACE NAVIGATION TABS (Selection Gradient Role)                 -->
+    <!-- WORKSPACE NAVIGATION TABS                                           -->
     <!-- =================================================================== -->
     <nav class="glass-panel squircle-card p-2 grid grid-cols-1 sm:grid-cols-2 gap-2 no-print">
       <button type="button" id="tabBtnEncoder" onclick="switchWorkspaceTab('encoder', true)" class="silky-btn px-4 py-3.5 squircle-control font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2.5 cursor-pointer grad-select-pill on-gradient-text">
-        <span class="w-6 h-6 squircle-sm bg-white/20 flex items-center justify-center text-xs font-mono">1</span>
-        <span>Tab 1: Raw Score &amp; Bulk Excel/Sheets Encoder (27% Rule)</span>
+        <span class="w-6 h-6 squircle-sm bg-white/20 flex items-center justify-center text-xs font-mono shrink-0">1</span>
+        <span>Tab 1: Raw Score, Bulk Excel/Sheets &amp; Test Parts</span>
       </button>
 
       <button type="button" id="tabBtnCalculator" onclick="switchWorkspaceTab('calculator', true)" class="silky-btn px-4 py-3.5 squircle-control font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2.5 cursor-pointer surface-text-secondary hover:bg-white/60 dark:hover:bg-slate-800/60">
-        <span class="w-6 h-6 squircle-sm bg-slate-500/15 flex items-center justify-center text-xs font-mono">2</span>
-        <span>Tab 2: Item &amp; Distractor Analysis Calculator</span>
+        <span class="w-6 h-6 squircle-sm bg-slate-500/15 flex items-center justify-center text-xs font-mono shrink-0">2</span>
+        <span>Tab 2: Item &amp; Distractor Analysis Dashboard</span>
       </button>
     </nav>
 
     <!-- =================================================================== -->
-    <!-- TAB 1: RAW SCORE & BULK EXCEL / GOOGLE SHEETS ENCODER               -->
+    <!-- TAB 1: RAW SCORE, BULK EXCEL / GOOGLE SHEETS & MIXED TEST PARTS     -->
     <!-- =================================================================== -->
     <section id="encoderWorkspaceSection" class="space-y-6 no-print animate-workspace-enter">
-      <!-- Answer Key & Bulk Paste Workspace -->
+      <!-- Answer Key, Mixed-Format Ranges & Bulk Paste Workspace -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <!-- Left: Answer Key Configuration (5 Cols) -->
+        <!-- Left: Answer Key Configuration & Mixed-Format Parts (5 Cols) -->
         <div class="lg:col-span-5 glass-panel squircle-card p-5 sm:p-6 space-y-4">
           <div class="flex items-center justify-between gap-2 pb-3 border-b border-slate-200/80 dark:border-slate-700/70">
-            <div class="flex items-center gap-2.5">
-              <span class="w-8 h-8 squircle-control grad-action-cta on-gradient-text border flex items-center justify-center text-sm shadow">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="w-8 h-8 squircle-control grad-action-cta on-gradient-text border flex items-center justify-center text-sm shadow shrink-0">
                 <i class="fa-solid fa-key"></i>
               </span>
-              <div>
+              <div class="min-w-0">
                 <h2 class="compact-title text-base font-extrabold surface-text-primary">Susi sa Pagwawasto (Answer Key)</h2>
                 <p class="text-[11px] surface-text-muted">
                   Target na Bilang ng Aytem (K): <strong id="encoderTargetTotalItems" class="font-mono text-indigo-700 dark:text-indigo-300">0</strong>
                 </p>
               </div>
             </div>
-            <span id="answerKeyCountBadge" class="px-2.5 py-1 squircle-sm text-xs font-mono font-extrabold bg-indigo-500/15 text-indigo-700 dark:text-indigo-300">
+            <span id="answerKeyCountBadge" class="px-2.5 py-1 squircle-sm text-xs font-mono font-extrabold bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 shrink-0">
               0 Aytem
             </span>
           </div>
 
           <div class="space-y-2">
             <label class="block text-xs font-bold surface-text-secondary">
-              I-type o I-paste ang Answer Key (Hal. <code class="font-mono">A, B, C, D...</code> o <code class="font-mono">ABCD...</code>)
+              I-type o I-paste ang Answer Key (Hal. <code class="font-mono">A, B, C, D...</code>, <code class="font-mono">T, F...</code> o <code class="font-mono">T, M...</code>)
             </label>
-            <textarea id="bulkAnswerKeyInput" rows="3" placeholder="Halimbawa: A, C, B, D, A, B, C, D, A, C..." class="w-full p-3 squircle-control glass-subcard surface-text-primary text-xs sm:text-sm font-mono uppercase outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            <textarea id="bulkAnswerKeyInput" rows="3" placeholder="Halimbawa: A, C, B, D, A, B, C, D, T, M..." class="w-full p-3 squircle-control glass-subcard surface-text-primary text-xs sm:text-sm font-mono uppercase outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
             <div class="flex flex-wrap items-center gap-2">
               <button type="button" onclick="applyBulkAnswerKey()" class="silky-btn px-4 py-2.5 squircle-control grad-action-cta on-gradient-text border text-xs font-extrabold flex items-center gap-2 cursor-pointer shadow">
                 <i class="fa-solid fa-check"></i>
@@ -561,6 +589,56 @@
             </div>
           </div>
 
+          <!-- Single-Format Locked Format & Dynamic Choice-Set Selector -->
+          <div id="singleFormatChoiceSetCard" class="p-3.5 squircle-control bg-indigo-500/10 border border-indigo-500/35 space-y-2.5">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-indigo-800 dark:text-indigo-200 flex items-center gap-1.5">
+                <i class="fa-solid fa-lock text-indigo-600 dark:text-indigo-400"></i>
+                <span>Naka-lock na Uri: <strong id="singleLockedFormatLabel">Multiple Choice</strong></span>
+              </span>
+              <span class="px-2 py-0.5 squircle-sm text-[10px] font-mono font-bold bg-indigo-600 text-white">
+                Single-Format Auto-Sync
+              </span>
+            </div>
+
+            <!-- Multiple Choice Choice-Set -->
+            <div id="singleChoiceMcWrap" class="space-y-1.5">
+              <label class="block text-[11px] font-bold surface-text-secondary">Hanay ng Pagpipilian (Multiple Choice Options):</label>
+              <div class="grid grid-cols-3 gap-1.5">
+                <button type="button" id="btnSingleMcAC" onclick="setSingleChoiceSet('A-C')" class="silky-btn py-1.5 px-2 squircle-sm text-xs font-mono font-extrabold border cursor-pointer">A–C (3)</button>
+                <button type="button" id="btnSingleMcAD" onclick="setSingleChoiceSet('A-D')" class="silky-btn py-1.5 px-2 squircle-sm text-xs font-mono font-extrabold border cursor-pointer">A–D (4)</button>
+                <button type="button" id="btnSingleMcAE" onclick="setSingleChoiceSet('A-E')" class="silky-btn py-1.5 px-2 squircle-sm text-xs font-mono font-extrabold border cursor-pointer">A–E (5)</button>
+              </div>
+            </div>
+
+            <!-- True or False Choice-Set -->
+            <div id="singleChoiceTfWrap" class="hidden space-y-1.5">
+              <div class="flex items-center justify-between gap-2">
+                <label class="text-[11px] font-bold surface-text-secondary">Pamantayan ng True or False:</label>
+                <span id="singleTfSmartBadge" class="text-[10px] font-mono font-bold text-indigo-700 dark:text-indigo-300">Auto-Detect Ready</span>
+              </div>
+              <div class="grid grid-cols-2 gap-1.5">
+                <button type="button" id="btnSingleTfTF" onclick="setSingleChoiceSet('T/F')" class="silky-btn py-1.5 px-2 squircle-sm text-xs font-mono font-extrabold border cursor-pointer">T / F (English)</button>
+                <button type="button" id="btnSingleTfTM" onclick="setSingleChoiceSet('T/M')" class="silky-btn py-1.5 px-2 squircle-sm text-xs font-mono font-extrabold border cursor-pointer">T / M (Filipino)</button>
+              </div>
+            </div>
+
+            <!-- Matching Type Choice-Set -->
+            <div id="singleChoiceMtWrap" class="hidden space-y-1.5">
+              <label class="block text-[11px] font-bold surface-text-secondary">Hanay ng Pagpipilian sa Matching Type (Hal. <code class="font-mono">A-D</code>, <code class="font-mono">A-F</code>, <code class="font-mono">A-H</code>):</label>
+              <div class="flex items-center gap-2">
+                <input type="text" id="singleMtRangeInput" value="A-F" oninput="handleSingleMtRangeInput()" placeholder="Hal. A-F" class="w-28 px-3 py-1.5 squircle-sm glass-subcard surface-text-primary text-xs font-mono font-extrabold uppercase text-center outline-none focus:ring-2 focus:ring-indigo-500" />
+                <span id="singleMtParsedPreview" class="text-[11px] font-mono surface-text-muted">Mga Opsyon: A, B, C, D, E, F</span>
+              </div>
+            </div>
+
+            <!-- Identification Dichotomous Notice -->
+            <div id="singleChoiceIdWrap" class="hidden text-[11px] font-semibold surface-text-secondary flex items-center gap-1.5">
+              <i class="fa-solid fa-check-double text-emerald-600 dark:text-emerald-400"></i>
+              <span>Awtomatikong <strong>Tama / Mali</strong> (Dichotomous — walang distractor options).</span>
+            </div>
+          </div>
+
           <!-- Visual Answer Key Chips -->
           <div class="space-y-1.5">
             <span class="block text-[11px] font-bold uppercase tracking-wider surface-text-muted">Kasalukuyang Answer Key (Q1 – QK):</span>
@@ -568,16 +646,89 @@
               <span class="surface-text-muted italic">Wala pang naka-set na Answer Key.</span>
             </div>
           </div>
+
+          <!-- Mixed-Format Parts & Sub-Range Choice-Set Builder Integrated in Tab 1 -->
+          <div id="mixedFormatPartsCard" class="hidden pt-4 border-t border-slate-200/80 dark:border-slate-700/70 space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-800 dark:text-indigo-200 flex items-center gap-1.5">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Mga Bahagi at Choice-Sets (Mixed-Format)</span>
+              </span>
+              <span class="px-2.5 py-0.5 squircle-sm text-[10px] font-mono font-bold bg-indigo-600 text-white">
+                Sub-Range Builder
+              </span>
+            </div>
+
+            <div class="space-y-2 text-xs">
+              <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 items-center">
+                <div class="sm:col-span-6 flex items-center gap-1.5">
+                  <span class="font-bold surface-text-secondary whitespace-nowrap">Mula</span>
+                  <input type="number" id="mixedRangeStart" min="1" placeholder="1" class="w-14 px-2 py-1.5 squircle-sm glass-subcard surface-text-primary font-mono font-bold text-center outline-none focus:ring-2 focus:ring-indigo-500" />
+                  <span class="font-bold surface-text-secondary whitespace-nowrap">hanggang</span>
+                  <input type="number" id="mixedRangeEnd" min="1" placeholder="20" class="w-14 px-2 py-1.5 squircle-sm glass-subcard surface-text-primary font-mono font-bold text-center outline-none focus:ring-2 focus:ring-indigo-500" />
+                </div>
+
+                <div class="sm:col-span-6">
+                  <select id="mixedRangeType" onchange="updateMixedRangeChoiceUI()" class="w-full px-2.5 py-1.5 squircle-sm glass-subcard surface-text-primary font-bold outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                    <option value="mc">Multiple Choice</option>
+                    <option value="tf">True or False (T/F o T/M)</option>
+                    <option value="mt">Matching Type</option>
+                    <option value="id">Identification</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Dynamic Sub-Range Choice-Set Control for Mixed-Format -->
+              <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 items-center">
+                <div class="sm:col-span-8">
+                  <div id="mixedChoiceMcWrap">
+                    <select id="mixedMcChoiceSelect" class="w-full px-2.5 py-1.5 squircle-sm glass-subcard surface-text-primary font-mono font-bold outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                      <option value="A-C">Choices: A–C (3 Options)</option>
+                      <option value="A-D" selected>Choices: A–D (4 Options)</option>
+                      <option value="A-E">Choices: A–E (5 Options)</option>
+                    </select>
+                  </div>
+
+                  <div id="mixedChoiceTfWrap" class="hidden">
+                    <select id="mixedTfChoiceSelect" class="w-full px-2.5 py-1.5 squircle-sm glass-subcard surface-text-primary font-mono font-bold outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                      <option value="AUTO">Auto-Detect (T/F o T/M)</option>
+                      <option value="T/F">T / F (English — True/False)</option>
+                      <option value="T/M">T / M (Filipino — Tama/Mali)</option>
+                    </select>
+                  </div>
+
+                  <div id="mixedChoiceMtWrap" class="hidden flex items-center gap-2">
+                    <span class="font-bold surface-text-secondary whitespace-nowrap">Hanay:</span>
+                    <input type="text" id="mixedMtRangeInput" value="A-F" placeholder="Hal. A-D o A-F" class="w-full px-2.5 py-1.5 squircle-sm glass-subcard surface-text-primary font-mono font-extrabold uppercase outline-none focus:ring-2 focus:ring-indigo-500" />
+                  </div>
+
+                  <div id="mixedChoiceIdWrap" class="hidden px-2.5 py-1.5 squircle-sm bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-bold text-emerald-700 dark:text-emerald-300">
+                    Dichotomous: Tama / Mali
+                  </div>
+                </div>
+
+                <div class="sm:col-span-4">
+                  <button type="button" onclick="addMixedFormatPart()" class="silky-btn w-full px-3 py-1.5 squircle-sm grad-select-pill on-gradient-text font-extrabold cursor-pointer">
+                    + Itakda
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div id="mixedPartsListWrap" class="flex flex-wrap gap-1.5 pt-1">
+              <span class="text-[11px] surface-text-muted italic">Wala pang naitakdang saklaw ng bahagi. Pwedeng magtakda sa itaas.</span>
+            </div>
+          </div>
         </div>
 
         <!-- Right: Bulk Paste from Excel/Google Sheets & Manual Student Entry (7 Cols) -->
         <div class="lg:col-span-7 glass-panel squircle-card p-5 sm:p-6 space-y-4">
           <div class="flex items-center justify-between gap-2 pb-3 border-b border-slate-200/80 dark:border-slate-700/70">
-            <div class="flex items-center gap-2.5">
-              <span class="w-8 h-8 squircle-control grad-action-cta on-gradient-text border flex items-center justify-center text-sm shadow">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="w-8 h-8 squircle-control grad-action-cta on-gradient-text border flex items-center justify-center text-sm shadow shrink-0">
                 <i class="fa-solid fa-table-cells"></i>
               </span>
-              <div>
+              <div class="min-w-0">
                 <h2 class="compact-title text-base font-extrabold surface-text-primary">Bulk Paste mula sa Excel / Google Sheets</h2>
                 <p class="text-[11px] surface-text-muted">
                   Format bawat linya: <code class="font-mono">Pangalan [TAB] Sagot1 [TAB] Sagot2...</code> o <code class="font-mono">Pangalan, ABCD...</code>
@@ -622,21 +773,21 @@
       <!-- ================================================================= -->
       <div id="depedClassPerformanceSection" class="glass-panel squircle-card p-5 sm:p-6 space-y-4">
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 pb-3 border-b border-slate-200/80 dark:border-slate-700/70">
-          <div class="flex items-start sm:items-center gap-3">
+          <div class="flex items-start sm:items-center gap-3 min-w-0">
             <span class="w-9 h-9 squircle-control grad-action-cta on-gradient-text border flex items-center justify-center text-base shadow shrink-0">
               <i class="fa-solid fa-graduation-cap"></i>
             </span>
-            <div>
+            <div class="min-w-0">
               <h3 class="compact-title text-base sm:text-lg font-extrabold surface-text-primary">
                 DepEd Class Mastery &amp; Proficiency Bands (NAT MPS &amp; DO No. 015, s. 2026)
               </h3>
-              <p class="text-xs surface-text-muted mt-0.5">
-                Awtomatikong pag-uuri ng antas ng pagkatuto ng buong klase batay sa Mean Percentage Score (MPS) at Zero-Based / Adjusted Transmutation Standards.
+              <p class="text-xs surface-text-muted mt-0.5 adaptive-wrap">
+                Awtomatikong pag-uuri ng antas ng pagkatuto ng buong klase batay sa Mean Percentage Score (MPS) at Minimum Proficiency Level (MPL).
               </p>
             </div>
           </div>
 
-          <div class="flex flex-wrap items-center gap-2 self-end lg:self-auto">
+          <div class="flex flex-wrap items-center gap-2 self-end lg:self-auto shrink-0">
             <span id="classMpsPill" class="px-3.5 py-1.5 squircle-sm text-xs sm:text-sm font-mono font-extrabold bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 border border-indigo-500/35">
               Class MPS: 0.00%
             </span>
@@ -662,23 +813,68 @@
               </div>
             </div>
 
-            <div class="p-3 squircle-sm bg-indigo-500/10 border border-indigo-500/30 text-xs surface-text-secondary leading-relaxed">
+            <div class="p-3 squircle-sm bg-indigo-500/10 border border-indigo-500/30 text-xs surface-text-secondary leading-relaxed adaptive-wrap">
               <i class="fa-solid fa-circle-info text-indigo-600 dark:text-indigo-400 mr-1"></i>
               <span id="classDepedSynthesisNote">I-encode ang mga sagot ng mag-aaral upang makita ang opisyal na DepEd NAT MPS classification at DO 015, s. 2026 proficiency distribution.</span>
             </div>
           </div>
 
-          <!-- Right: 5-Band Proficiency Frequency Distribution (DO 015, s. 2026 Table 11 + NAT MPS) (7 Cols) -->
+          <!-- Right: 5-Band Proficiency Frequency Distribution (7 Cols) -->
           <div class="lg:col-span-7 glass-subcard squircle-control p-4 space-y-2.5">
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between gap-2">
               <span class="text-[11px] font-extrabold uppercase tracking-wider surface-text-secondary">
                 Distribusyon ng Mag-aaral (DepEd Order No. 015, s. 2026 Proficiency Descriptors)
               </span>
-              <span class="text-[10px] font-mono surface-text-muted">Raw % Score Bands</span>
+              <span class="text-[10px] font-mono surface-text-muted shrink-0">Raw % Score Bands</span>
             </div>
 
-            <div id="depedBandsList" class="space-y-2 text-xs">
-              <!-- Populated dynamically -->
+            <div id="depedBandsList" class="space-y-2 text-xs"></div>
+          </div>
+        </div>
+
+        <!-- Pamantayan at Interpretasyon sa Class MPS at Achieved MPL -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 pt-2 border-t border-slate-200/80 dark:border-slate-700/70">
+          <!-- Class MPS Rubric & Interpretation -->
+          <div class="glass-subcard squircle-control p-4 border-l-4 border-l-indigo-500 space-y-2.5">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="compact-title text-xs font-extrabold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">
+                Pamantayan at Interpretasyon ng Class MPS (DepEd NAT)
+              </span>
+              <span id="mpsRubricCurrentBadge" class="px-2.5 py-0.5 squircle-sm text-[11px] font-mono font-extrabold bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 border border-indigo-500/30">
+                MPS: 0.00%
+              </span>
+            </div>
+            <p id="mpsRubricInterpretationText" class="text-xs surface-text-secondary leading-relaxed adaptive-wrap">
+              Ang <strong>Class Mean Percentage Score (MPS)</strong> ay ang porsyento ng tamang sagot ng buong klase mula sa kabuuang bilang ng aytem (K). Mag-encode ng datos upang makita ang interpretasyon.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5 pt-2 border-t border-slate-200/70 dark:border-slate-700/70 text-[10px] font-mono surface-text-secondary">
+              <div class="px-2 py-1 squircle-sm bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"><strong>96–100%:</strong> Mastered</div>
+              <div class="px-2 py-1 squircle-sm bg-blue-500/10 text-blue-700 dark:text-blue-300"><strong>86–95%:</strong> Closely Approx.</div>
+              <div class="px-2 py-1 squircle-sm bg-teal-500/10 text-teal-700 dark:text-teal-300"><strong>66–85%:</strong> Moving Towards</div>
+              <div class="px-2 py-1 squircle-sm bg-amber-500/10 text-amber-700 dark:text-amber-300"><strong>35–65%:</strong> Average Mastery</div>
+              <div class="px-2 py-1 squircle-sm bg-orange-500/10 text-orange-700 dark:text-orange-300"><strong>15–34%:</strong> Low Mastery</div>
+              <div class="px-2 py-1 squircle-sm bg-rose-500/10 text-rose-700 dark:text-rose-300"><strong>0–14%:</strong> Very Low / No</div>
+            </div>
+          </div>
+
+          <!-- Achieved MPL Rubric & Interpretation -->
+          <div class="glass-subcard squircle-control p-4 border-l-4 border-l-emerald-500 space-y-2.5">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="compact-title text-xs font-extrabold uppercase tracking-wider text-emerald-700 dark:text-emerald-300">
+                Pamantayan at Interpretasyon ng Achieved MPL (DO 015, s. 2026)
+              </span>
+              <span id="mplRubricCurrentBadge" class="px-2.5 py-0.5 squircle-sm text-[11px] font-mono font-extrabold bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">
+                MPL Pass: 0%
+              </span>
+            </div>
+            <p id="mplRubricInterpretationText" class="text-xs surface-text-secondary leading-relaxed adaptive-wrap">
+              Ang <strong>Achieved Minimum Proficiency Level (MPL)</strong> ay sumusukat sa porsyento ng mga mag-aaral na nakakuha ng hindi bababa sa <strong>75% raw score</strong> (Connecting, Benchmarking, o Advancing).
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pt-2 border-t border-slate-200/70 dark:border-slate-700/70 text-[10px] font-mono surface-text-secondary">
+              <div class="px-2 py-1 squircle-sm bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"><strong>&ge; 75% ng Klase:</strong> Mataas na Mastery (Proceed)</div>
+              <div class="px-2 py-1 squircle-sm bg-teal-500/10 text-teal-700 dark:text-teal-300"><strong>50% – 74% ng Klase:</strong> Katamtaman (Targeted Review)</div>
+              <div class="px-2 py-1 squircle-sm bg-amber-500/10 text-amber-700 dark:text-amber-300"><strong>25% – 49% ng Klase:</strong> Mababa (Reteaching Needed)</div>
+              <div class="px-2 py-1 squircle-sm bg-rose-500/10 text-rose-700 dark:text-rose-300"><strong>&lt; 25% ng Klase:</strong> Kritikal (Intensive Remediation)</div>
             </div>
           </div>
         </div>
@@ -700,11 +896,11 @@
           </div>
         </div>
 
-        <!-- Real-Time Tab 1 Validation Banner (Synced with Kabuoang Bilang ng Aytem K) -->
+        <!-- Real-Time Tab 1 Validation Banner -->
         <div id="tab1ValidationBanner" class="hidden px-4 py-3 squircle-control border text-xs flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div class="flex items-start sm:items-center gap-2">
             <i id="tab1ValidationIcon" class="fa-solid fa-circle-check mt-0.5 sm:mt-0 shrink-0"></i>
-            <span id="tab1ValidationText" class="font-semibold">Handa na ang mga datos ng mag-aaral.</span>
+            <span id="tab1ValidationText" class="font-semibold adaptive-wrap">Handa na ang mga datos ng mag-aaral.</span>
           </div>
           <span id="tab1ValidationBadge" class="px-2.5 py-1 squircle-sm text-[11px] font-mono font-bold whitespace-nowrap self-end sm:self-auto">
             Target Aytem (K): 0
@@ -735,7 +931,7 @@
     </section>
 
     <!-- =================================================================== -->
-    <!-- TAB 2: ITEM & DISTRACTOR ANALYSIS CALCULATOR                        -->
+    <!-- TAB 2: ITEM & DISTRACTOR ANALYSIS DASHBOARD                         -->
     <!-- =================================================================== -->
     <section id="calculatorWorkspaceSection" class="hidden space-y-6 no-print animate-workspace-enter">
 
@@ -764,263 +960,8 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-
-        <!-- LEFT / TOP WORKSPACE: HAKBANG 1 & HAKBANG 2 (7 Cols on LG) -->
-        <div class="lg:col-span-7 glass-panel squircle-card p-5 sm:p-6 space-y-6">
-          <!-- Hakbang 1 Header -->
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 pb-3 border-b border-slate-200/80 dark:border-slate-700/70">
-            <div class="flex items-center gap-2.5 min-w-0 flex-1">
-              <span class="w-8 h-8 squircle-control grad-action-cta on-gradient-text border font-extrabold text-sm flex items-center justify-center shadow shrink-0">1</span>
-              <div class="min-w-0 flex-1">
-                <h2 class="compact-title text-base sm:text-lg font-extrabold surface-text-primary">
-                  Hakbang 1: Impormasyon at Uri ng Aytem
-                </h2>
-                <span id="smartNextItemBadge" class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 squircle-sm text-[11px] font-mono font-bold bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 border border-indigo-500/30">
-                  Susunod na Aytem: #1
-                </span>
-              </div>
-            </div>
-
-            <!-- Inner Squircle "Aytem #" Input -->
-            <div class="flex items-center justify-end self-end sm:self-auto shrink-0">
-              <div class="flex items-center gap-1.5 p-1 squircle-control glass-subcard border-indigo-500/50 focus-within:ring-2 focus-within:ring-indigo-500">
-                <span class="px-3 py-1.5 squircle-sm text-xs font-extrabold grad-select-pill on-gradient-text select-none whitespace-nowrap">Aytem #</span>
-                <input type="number" id="itemNumberInput" min="1" value="1" oninput="handleItemNumberChange()" placeholder="Ilagay dito" class="w-20 px-2 py-1.5 squircle-sm text-sm font-mono font-bold text-center bg-transparent surface-text-primary outline-none" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Mixed-Format Parts & Item Range Builder ("Mula Aytem _ hanggang Aytem _") -->
-          <div id="mixedFormatPartsCard" class="hidden p-4 squircle-control bg-indigo-500/10 border border-indigo-500/35 space-y-3">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-800 dark:text-indigo-200 flex items-center gap-1.5">
-                <i class="fa-solid fa-layer-group"></i>
-                <span>Mga Bahagi ng Pagsusulit (Mixed-Format Item Ranges)</span>
-              </span>
-              <span id="mixedActiveRangeTag" class="px-2.5 py-0.5 squircle-sm text-[11px] font-mono font-bold bg-indigo-600 text-white">
-                Manual na Pagpili
-              </span>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 items-center text-xs">
-              <div class="sm:col-span-5 flex items-center gap-1.5">
-                <span class="font-bold surface-text-secondary whitespace-nowrap">Mula Aytem</span>
-                <input type="number" id="mixedRangeStart" min="1" placeholder="1" class="w-16 px-2 py-1.5 squircle-sm glass-subcard surface-text-primary font-mono font-bold text-center outline-none focus:ring-2 focus:ring-indigo-500" />
-                <span class="font-bold surface-text-secondary whitespace-nowrap">hanggang</span>
-                <input type="number" id="mixedRangeEnd" min="1" placeholder="20" class="w-16 px-2 py-1.5 squircle-sm glass-subcard surface-text-primary font-mono font-bold text-center outline-none focus:ring-2 focus:ring-indigo-500" />
-              </div>
-
-              <div class="sm:col-span-4">
-                <select id="mixedRangeType" class="w-full px-2.5 py-1.5 squircle-sm glass-subcard surface-text-primary font-bold outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
-                  <option value="mc">Multiple Choice</option>
-                  <option value="tf">True or False</option>
-                  <option value="mt">Matching Type</option>
-                  <option value="id">Identification</option>
-                </select>
-              </div>
-
-              <div class="sm:col-span-3">
-                <button type="button" onclick="addMixedFormatPart()" class="silky-btn w-full px-3 py-1.5 squircle-sm grad-select-pill on-gradient-text font-extrabold cursor-pointer">
-                  + Itakda ang Bahagi
-                </button>
-              </div>
-            </div>
-
-            <div id="mixedPartsListWrap" class="flex flex-wrap gap-1.5 pt-1">
-              <span class="text-[11px] surface-text-muted italic">Wala pang naitakdang saklaw ng bahagi. Pwedeng magtakda sa itaas o pumili nang direkta sa ibaba.</span>
-            </div>
-          </div>
-
-          <!-- Limit Guard Warning Banner (Shown when Item # > Kabuoang Bilang ng Aytem K) -->
-          <div id="itemLimitGuardBanner" class="hidden px-4 py-3 squircle-control bg-amber-500/15 border border-amber-500/50 text-xs text-amber-950 dark:text-amber-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5">
-            <div class="flex items-start gap-2">
-              <i class="fa-solid fa-triangle-exclamation text-amber-600 dark:text-amber-400 mt-0.5 shrink-0"></i>
-              <span id="itemLimitGuardText" class="font-semibold leading-snug">
-                Babala: Lumampas ang bilang ng aytem sa itinakdang kabuoan (K).
-              </span>
-            </div>
-            <button type="button" onclick="expandTotalItemsToCurrent()" class="silky-btn px-3 py-1.5 squircle-sm grad-action-cta on-gradient-text border font-bold text-[11px] whitespace-nowrap self-end sm:self-auto shrink-0 cursor-pointer">
-              I-update ang K
-            </button>
-          </div>
-
-          <!-- Uri ng Aytem Buttons + Single-Format Lock Badge -->
-          <div class="space-y-2">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <label class="block text-xs font-extrabold uppercase tracking-wider surface-text-secondary">
-                Uri ng Aytem
-              </label>
-              <span id="singleFormatLockBadge" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 squircle-sm text-[11px] font-bold bg-indigo-500/15 text-indigo-800 dark:text-indigo-200 border border-indigo-500/35">
-                <i class="fa-solid fa-lock"></i>
-                <span>Naka-lock sa Single-Format (Multiple Choice)</span>
-              </span>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              <button type="button" id="itemTypeBtn_mc" onclick="selectItemType('mc')" class="silky-btn p-3 squircle-control border text-xs font-extrabold flex flex-col items-center justify-center gap-1.5 cursor-pointer grad-select-pill on-gradient-text shadow">
-                <i class="fa-solid fa-list-ul text-sm"></i>
-                <span>Multiple Choice</span>
-              </button>
-              <button type="button" id="itemTypeBtn_tf" onclick="selectItemType('tf')" class="silky-btn p-3 squircle-control border text-xs font-extrabold flex flex-col items-center justify-center gap-1.5 cursor-pointer glass-subcard surface-text-secondary">
-                <i class="fa-solid fa-check-double text-sm"></i>
-                <span>True or False</span>
-              </button>
-              <button type="button" id="itemTypeBtn_mt" onclick="selectItemType('mt')" class="silky-btn p-3 squircle-control border text-xs font-extrabold flex flex-col items-center justify-center gap-1.5 cursor-pointer glass-subcard surface-text-secondary">
-                <i class="fa-solid fa-arrows-left-right text-sm"></i>
-                <span>Matching Type</span>
-              </button>
-              <button type="button" id="itemTypeBtn_id" onclick="selectItemType('id')" class="silky-btn p-3 squircle-control border text-xs font-extrabold flex flex-col items-center justify-center gap-1.5 cursor-pointer glass-subcard surface-text-secondary">
-                <i class="fa-solid fa-pen-nib text-sm"></i>
-                <span>Identification</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Saklaw ng Pagpipilian & Tamang Sagot (Answer Key) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div id="optionRangeContainer" class="space-y-1.5">
-              <label class="block text-xs font-extrabold uppercase tracking-wider surface-text-secondary">
-                Saklaw ng Pagpipilian
-              </label>
-              <div id="optionRangeButtons" class="grid grid-cols-4 gap-1.5">
-                <button type="button" onclick="selectOptionRange('A-C')" id="rangeBtn_A-C" class="silky-btn py-2 squircle-sm text-xs font-mono font-extrabold border glass-subcard surface-text-secondary cursor-pointer">A–C</button>
-                <button type="button" onclick="selectOptionRange('A-D')" id="rangeBtn_A-D" class="silky-btn py-2 squircle-sm text-xs font-mono font-extrabold border grad-select-pill on-gradient-text cursor-pointer">A–D</button>
-                <button type="button" onclick="selectOptionRange('A-E')" id="rangeBtn_A-E" class="silky-btn py-2 squircle-sm text-xs font-mono font-extrabold border glass-subcard surface-text-secondary cursor-pointer">A–E</button>
-                <button type="button" onclick="selectOptionRange('A-F')" id="rangeBtn_A-F" class="silky-btn py-2 squircle-sm text-xs font-mono font-extrabold border glass-subcard surface-text-secondary cursor-pointer">A–F</button>
-              </div>
-            </div>
-
-            <div id="correctAnswerContainer" class="space-y-1.5">
-              <label class="block text-xs font-extrabold uppercase tracking-wider surface-text-secondary">
-                Tamang Sagot (Answer Key)
-              </label>
-              <div id="correctKeyButtonsWrap" class="flex flex-wrap gap-1.5"></div>
-            </div>
-          </div>
-
-          <!-- Hakbang 2 Header & Group Size (n) -->
-          <div class="pt-4 border-t border-slate-200/80 dark:border-slate-700/70 space-y-4">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5">
-              <div class="flex items-center gap-2.5">
-                <span class="w-8 h-8 squircle-control grad-action-cta on-gradient-text border font-extrabold text-sm flex items-center justify-center shadow shrink-0">2</span>
-                <div>
-                  <h2 class="compact-title text-base sm:text-lg font-extrabold surface-text-primary">
-                    Hakbang 2: Bilang ng Pumili (Upper vs. Lower 27%)
-                  </h2>
-                  <p class="text-[11px] surface-text-muted">
-                    Ilagay ang bilang ng sumagot sa bawat opsyon mula sa Upper at Lower groups.
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-center gap-2 self-end sm:self-auto">
-                <label class="text-xs font-extrabold surface-text-secondary whitespace-nowrap">Laki ng Grupo (n):</label>
-                <input type="number" id="groupSizeNInput" min="1" value="10" oninput="recalculateLiveItemMetrics()" class="w-20 px-2.5 py-1.5 squircle-control glass-subcard border-indigo-500/50 surface-text-primary text-sm font-mono font-extrabold text-center outline-none focus:ring-2 focus:ring-indigo-500" />
-              </div>
-            </div>
-
-            <!-- Balanced Option Matrix Grid -->
-            <div id="optionMatrixContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
-
-            <!-- Action Buttons -->
-            <div class="flex flex-wrap items-center justify-between gap-2 pt-2">
-              <button type="button" onclick="clearCurrentMatrixInputs()" class="silky-btn px-4 py-2.5 squircle-control glass-subcard hover:border-slate-400 text-xs font-bold surface-text-primary flex items-center gap-1.5 cursor-pointer">
-                <i class="fa-solid fa-eraser"></i>
-                <span>Linisin ang Matrix</span>
-              </button>
-
-              <button type="button" onclick="saveCurrentItemAnalysis()" class="silky-btn px-5 py-3 squircle-control grad-action-cta on-gradient-text border text-xs sm:text-sm font-extrabold flex items-center gap-2 shadow-lg cursor-pointer">
-                <i class="fa-solid fa-floppy-disk"></i>
-                <span>I-save ang Aytem sa Talaan</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT WORKSPACE: LIVE ITEM PREVIEW & DISTRACTOR/BISTRACTOR STATUS (5 Cols on LG) -->
-        <div class="lg:col-span-5 glass-panel squircle-card p-5 sm:p-6 space-y-4">
-          <div class="flex items-center justify-between pb-3 border-b border-slate-200/80 dark:border-slate-700/70">
-            <div class="flex items-center gap-2.5">
-              <span class="w-8 h-8 squircle-control grad-action-cta on-gradient-text border flex items-center justify-center text-sm shadow">
-                <i class="fa-solid fa-bolt"></i>
-              </span>
-              <div>
-                <h2 class="compact-title text-base font-extrabold surface-text-primary">Live Resulta ng Kasalukuyang Aytem</h2>
-                <p class="text-[11px] surface-text-muted">P, D, P<sub>U</sub>, P<sub>L</sub>, r<sub>pbis</sub> at Bistractor Evaluation</p>
-              </div>
-            </div>
-            <span id="liveDecisionBadge" class="px-3 py-1 squircle-sm text-xs font-extrabold uppercase tracking-wider bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-400/30">
-              REVISE
-            </span>
-          </div>
-
-          <!-- P & D Metric Cards -->
-          <div class="grid grid-cols-2 gap-3">
-            <div class="glass-subcard squircle-control p-3.5 text-center">
-              <span class="block text-[11px] font-bold uppercase surface-text-muted">Difficulty Index (P)</span>
-              <span id="livePValue" class="block text-2xl sm:text-3xl font-mono font-black text-indigo-700 dark:text-indigo-300 mt-1">0.00</span>
-              <span id="livePLabel" class="block text-xs font-bold surface-text-secondary mt-1">Very Difficult</span>
-            </div>
-
-            <div class="glass-subcard squircle-control p-3.5 text-center">
-              <span class="block text-[11px] font-bold uppercase surface-text-muted">Discrimination Index (D)</span>
-              <span id="liveDValue" class="block text-2xl sm:text-3xl font-mono font-black text-teal-700 dark:text-teal-300 mt-1">0.00</span>
-              <span id="liveDLabel" class="block text-xs font-bold surface-text-secondary mt-1">Poor</span>
-            </div>
-          </div>
-
-          <!-- Proportion Correct Upper (PU) & Lower (PL) Cards + Interpretations -->
-          <div class="grid grid-cols-2 gap-3">
-            <div class="glass-subcard squircle-control p-3 border-l-4 border-l-emerald-500 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-extrabold uppercase text-emerald-700 dark:text-emerald-400">Upper Prop. (P<sub>U</sub>)</span>
-                <span id="livePUValue" class="font-mono font-black text-sm text-emerald-700 dark:text-emerald-300">0.00 (0%)</span>
-              </div>
-              <p id="livePUInterp" class="text-[11px] surface-text-secondary leading-snug">Mababa sa Upper Group — Suriin ang tanong.</p>
-            </div>
-
-            <div class="glass-subcard squircle-control p-3 border-l-4 border-l-rose-500 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-extrabold uppercase text-rose-700 dark:text-rose-400">Lower Prop. (P<sub>L</sub>)</span>
-                <span id="livePLValue" class="font-mono font-black text-sm text-rose-700 dark:text-rose-300">0.00 (0%)</span>
-              </div>
-              <p id="livePLInterp" class="text-[11px] surface-text-secondary leading-snug">Mababa sa Lower Group — Epektibong distractor.</p>
-            </div>
-          </div>
-
-          <!-- Live Group Tallies & Point-Biserial (r_pbis) -->
-          <div class="glass-subcard squircle-control p-3 grid grid-cols-4 gap-1 text-center text-xs">
-            <div>
-              <span class="block surface-text-muted font-semibold text-[10px]">R<sub>U</sub> / n</span>
-              <span id="liveRUCount" class="font-mono font-extrabold text-sm text-emerald-600 dark:text-emerald-400">0</span>
-            </div>
-            <div class="border-l border-slate-300 dark:border-slate-700">
-              <span class="block surface-text-muted font-semibold text-[10px]">R<sub>L</sub> / n</span>
-              <span id="liveRLCount" class="font-mono font-extrabold text-sm text-rose-600 dark:text-rose-400">0</span>
-            </div>
-            <div class="border-l border-slate-300 dark:border-slate-700">
-              <span class="block surface-text-muted font-semibold text-[10px]">Kabuuan (2n)</span>
-              <span id="liveTwoNCount" class="font-mono font-extrabold text-sm surface-text-primary">20</span>
-            </div>
-            <div class="border-l border-slate-300 dark:border-slate-700">
-              <span class="block surface-text-muted font-semibold text-[10px]">r<sub>pbis</sub></span>
-              <span id="liveRpbisValue" class="font-mono font-extrabold text-sm text-cyan-700 dark:text-cyan-300">—</span>
-            </div>
-          </div>
-
-          <!-- Distractor & Bistractor Analysis Breakdown -->
-          <div class="space-y-2">
-            <div class="flex items-center justify-between">
-              <span class="block text-xs font-extrabold uppercase tracking-wider surface-text-secondary">
-                Distractor &amp; Bistractor Analysis
-              </span>
-              <span class="text-[10px] font-mono surface-text-muted">D<sub>opt</sub> = P<sub>U(opt)</sub> &minus; P<sub>L(opt)</sub></span>
-            </div>
-            <div id="liveDistractorList" class="space-y-2 text-xs"></div>
-          </div>
-        </div>
-      </div>
+      <!-- Hidden carrier for group size (n) synced from Tab 1 -->
+      <input type="hidden" id="groupSizeNInput" value="10" />
     </section>
 
     <!-- =================================================================== -->
@@ -1028,21 +969,21 @@
     <!-- =================================================================== -->
     <section id="summarySection" class="hidden glass-panel squircle-card p-5 sm:p-6 space-y-5 animate-workspace-enter">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-3 border-b border-slate-200/80 dark:border-slate-700/70">
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3 min-w-0">
           <span class="w-9 h-9 squircle-control grad-action-cta on-gradient-text border flex items-center justify-center text-base shadow shrink-0">
             <i class="fa-solid fa-table-list"></i>
           </span>
-          <div>
+          <div class="min-w-0">
             <h2 class="compact-title text-base sm:text-xl font-extrabold surface-text-primary">
               Pangkalahatang Buod ng Pagsusulit at Talaan ng mga Aytem
             </h2>
-            <p class="text-xs surface-text-muted">
+            <p class="text-xs surface-text-muted adaptive-wrap">
               Kumpletong talaan ng P, D, P<sub>U</sub>, P<sub>L</sub>, Point-Biserial (r<sub>pbis</sub>), at Bistractor diagnostics.
             </p>
           </div>
         </div>
 
-        <div class="flex flex-wrap items-center gap-2 no-print">
+        <div class="flex flex-wrap items-center gap-2 no-print shrink-0">
           <button type="button" onclick="exportSummaryCSV()" class="silky-btn px-3.5 py-2 squircle-control glass-subcard hover:border-emerald-500/60 text-xs font-extrabold surface-text-primary flex items-center gap-1.5 cursor-pointer">
             <i class="fa-solid fa-file-csv text-emerald-600 dark:text-emerald-400"></i>
             <span>Export CSV</span>
@@ -1136,7 +1077,7 @@
           </thead>
           <tbody id="savedItemsTableBody" class="divide-y divide-slate-200 dark:divide-slate-800">
             <tr>
-              <td colspan="11" class="p-6 text-center surface-text-muted italic">Wala pang naka-save na aytem sa talaan.</td>
+              <td colspan="11" class="p-6 text-center surface-text-muted italic">Wala pang naka-save na aytem sa talaan. I-click ang "I-analyze Lahat ng Aytem &rarr; Tab 2" sa Tab 1.</td>
             </tr>
           </tbody>
         </table>
@@ -1163,11 +1104,7 @@
     </section>
 
     <!-- =================================================================== -->
-    <!-- DEDICATED POST-SUMMARY PANELS (TAB 2):                              -->
-    <!-- 1. KR-20 / KR-21 RELIABILITY & SEM INTERPRETATION                   -->
-    <!-- 2. MEAN DIFFICULTY (P̄), MEAN DISCRIMINATION (D̄) & DEPED MPS         -->
-    <!-- 3. STANDALONE INTERACTIVE VISUAL DISTRACTOR & BISTRACTOR CHART      -->
-    <!-- 4. STANDALONE INTERACTIVE ITEM METRICS CHART (P, D & r_pbis)        -->
+    <!-- DEDICATED POST-SUMMARY PANELS (TAB 2)                               -->
     <!-- =================================================================== -->
     <section id="postSummaryInsightsSection" class="hidden space-y-6 no-print animate-workspace-enter">
 
@@ -1182,7 +1119,7 @@
               <h3 class="compact-title text-base sm:text-lg font-extrabold surface-text-primary">
                 Interpretasyon ng Test Reliability (<span id="interpReliabilityMethodTitle">KR-20 / KR-21</span>) &amp; SEM
               </h3>
-              <p id="interpReliabilityBasisSubtitle" class="text-xs surface-text-muted mt-0.5">
+              <p id="interpReliabilityBasisSubtitle" class="text-xs surface-text-muted mt-0.5 adaptive-wrap">
                 Psychometric na pagsusuri sa katapatan at pagkakapare-pareho (internal consistency) ng pagsusulit.
               </p>
             </div>
@@ -1202,32 +1139,61 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
-          <div class="lg:col-span-8 glass-subcard squircle-control p-4 space-y-2.5 flex flex-col justify-between">
+          <div class="lg:col-span-7 glass-subcard squircle-control p-4 space-y-3 flex flex-col justify-between">
             <div class="space-y-1.5">
               <span class="compact-title block text-[11px] font-extrabold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">
                 Kahulugan ng Resulta at Rekomendasyon sa Guro
               </span>
-              <p id="interpReliabilityMeaningText" class="text-xs sm:text-sm surface-text-secondary leading-relaxed">
+              <p id="interpReliabilityMeaningText" class="text-xs sm:text-sm surface-text-secondary leading-relaxed adaptive-wrap">
                 Mag-save muna ng hindi bababa sa 2 aytem sa talaan upang awtomatikong makalkula at mabigyang-kahulugan ang KR-20 o KR-21 reliability index ng iyong pagsusulit.
               </p>
             </div>
-            <div class="px-3.5 py-2.5 squircle-sm bg-indigo-500/10 border border-indigo-500/30 text-xs surface-text-secondary flex items-start gap-2">
+
+            <!-- Dedicated SEM Interpretation Box -->
+            <div class="p-3 squircle-sm bg-cyan-500/10 border border-cyan-500/35 text-xs surface-text-secondary space-y-1 adaptive-wrap">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="font-extrabold uppercase text-[10px] tracking-wider text-cyan-800 dark:text-cyan-300">
+                  <i class="fa-solid fa-ruler-horizontal mr-1"></i>Interpretasyon ng Standard Error of Measurement (SEM)
+                </span>
+                <span id="interpSemQualityBadge" class="px-2 py-0.5 squircle-sm text-[10px] font-mono font-extrabold bg-cyan-500/20 text-cyan-800 dark:text-cyan-200">
+                  SEM: —
+                </span>
+              </div>
+              <p id="interpSemMeaningText" class="leading-relaxed">
+                Ang <strong>SEM</strong> ay nagsasaad ng inaasahang lawak ng paglihis (margin of error sa puntos) sa tunay na kakayahan (<em>True Score</em>) ng mag-aaral. Mas maliit na SEM, mas eksakto at maaasahan ang iskor.
+              </p>
+            </div>
+
+            <div class="px-3.5 py-2.5 squircle-sm bg-indigo-500/10 border border-indigo-500/30 text-xs surface-text-secondary flex items-start gap-2 adaptive-wrap">
               <i class="fa-solid fa-lightbulb text-indigo-600 dark:text-indigo-400 mt-0.5 shrink-0"></i>
               <span id="interpReliabilityActionText">Tip: Para sa eksaktong KR-20 at Point-Biserial (r_pbis) computation, i-encode ang mga sagot ng mag-aaral sa Tab 1.</span>
             </div>
           </div>
 
-          <div class="lg:col-span-4 glass-subcard squircle-control p-4 space-y-2">
-            <span class="compact-title block text-[11px] font-extrabold uppercase tracking-wider surface-text-secondary">
-              Pamantayang Sukatan (KR-20 / KR-21)
-            </span>
-            <ul class="space-y-1 text-[11px] font-mono surface-text-secondary">
-              <li class="flex justify-between gap-2"><span class="font-bold text-emerald-600 dark:text-emerald-400">&ge; 0.90</span><span>Napakataas (Excellent)</span></li>
-              <li class="flex justify-between gap-2"><span class="font-bold text-blue-600 dark:text-blue-400">0.80 – 0.89</span><span>Mataas na Uri (Very Good)</span></li>
-              <li class="flex justify-between gap-2"><span class="font-bold text-sky-600 dark:text-sky-400">0.70 – 0.79</span><span>Katanggap-tanggap (Acceptable)</span></li>
-              <li class="flex justify-between gap-2"><span class="font-bold text-amber-600 dark:text-amber-400">0.60 – 0.69</span><span>Katamtaman (Questionable)</span></li>
-              <li class="flex justify-between gap-2"><span class="font-bold text-rose-600 dark:text-rose-400">&lt; 0.60</span><span>Mababa (Needs Revision)</span></li>
-            </ul>
+          <div class="lg:col-span-5 glass-subcard squircle-control p-4 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="compact-title block text-[11px] font-extrabold uppercase tracking-wider surface-text-secondary">
+                Pamantayang Sukatan (KR-20 / KR-21)
+              </span>
+              <ul class="space-y-1 text-[11px] font-mono surface-text-secondary">
+                <li class="flex justify-between gap-2"><span class="font-bold text-emerald-600 dark:text-emerald-400">&ge; 0.90</span><span>Napakataas (Excellent)</span></li>
+                <li class="flex justify-between gap-2"><span class="font-bold text-blue-600 dark:text-blue-400">0.80 – 0.89</span><span>Mataas na Uri (Very Good)</span></li>
+                <li class="flex justify-between gap-2"><span class="font-bold text-sky-600 dark:text-sky-400">0.70 – 0.79</span><span>Katanggap-tanggap (Acceptable)</span></li>
+                <li class="flex justify-between gap-2"><span class="font-bold text-amber-600 dark:text-amber-400">0.60 – 0.69</span><span>Katamtaman (Questionable)</span></li>
+                <li class="flex justify-between gap-2"><span class="font-bold text-rose-600 dark:text-rose-400">&lt; 0.60</span><span>Mababa (Needs Revision)</span></li>
+              </ul>
+            </div>
+
+            <div class="pt-2.5 border-t border-slate-200/70 dark:border-slate-700/70 space-y-1.5">
+              <span class="compact-title block text-[11px] font-extrabold uppercase tracking-wider text-cyan-700 dark:text-cyan-300">
+                Pamantayan ng SEM (Relatibo sa K)
+              </span>
+              <ul class="space-y-1 text-[11px] font-mono surface-text-secondary">
+                <li class="flex justify-between gap-2"><span class="font-bold text-emerald-600 dark:text-emerald-400">&le; 5% ng K</span><span>Napakatumpak (Very High Precision)</span></li>
+                <li class="flex justify-between gap-2"><span class="font-bold text-blue-600 dark:text-blue-400">5.1% – 8% ng K</span><span>Katanggap-tanggap (Acceptable Error)</span></li>
+                <li class="flex justify-between gap-2"><span class="font-bold text-rose-600 dark:text-rose-400">&gt; 8% ng K</span><span>Malawak ang Error Band (High Error)</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -1243,7 +1209,7 @@
               <h3 class="compact-title text-base sm:text-lg font-extrabold surface-text-primary">
                 Interpretasyon ng Mean Difficulty (P&#772;), Mean Discrimination (D&#772;) at DepEd MPS
               </h3>
-              <p class="text-xs surface-text-muted mt-0.5">
+              <p class="text-xs surface-text-muted mt-0.5 adaptive-wrap">
                 Pangkalahatang pagsusuri sa antas ng kahirapan, kakayahang magpaiba, at DepEd mastery classification.
               </p>
             </div>
@@ -1267,11 +1233,11 @@
                   </span>
                 </div>
               </div>
-              <p id="interpMeanPMeaningText" class="text-xs sm:text-sm surface-text-secondary leading-relaxed">
+              <p id="interpMeanPMeaningText" class="text-xs sm:text-sm surface-text-secondary leading-relaxed adaptive-wrap">
                 Mag-save ng aytem upang makita ang interpretasyon ng Mean Difficulty (P&#772;) ng pagsusulit.
               </p>
             </div>
-            <div class="pt-2 border-t border-slate-200/70 dark:border-slate-700/70 text-[11px] font-mono surface-text-muted">
+            <div class="pt-2 border-t border-slate-200/70 dark:border-slate-700/70 text-[11px] font-mono surface-text-muted adaptive-wrap">
               DepEd NAT MPS: 96–100% Mastered • 86–95% Closely Approximating • 66–85% Moving Towards Mastery • 35–65% Average • &lt;35% Low
             </div>
           </div>
@@ -1292,18 +1258,18 @@
                   </span>
                 </div>
               </div>
-              <p id="interpMeanDMeaningText" class="text-xs sm:text-sm surface-text-secondary leading-relaxed">
+              <p id="interpMeanDMeaningText" class="text-xs sm:text-sm surface-text-secondary leading-relaxed adaptive-wrap">
                 Mag-save ng aytem upang makita ang interpretasyon ng Mean Discrimination (D&#772;) ng pagsusulit.
               </p>
             </div>
-            <div class="pt-2 border-t border-slate-200/70 dark:border-slate-700/70 text-[11px] font-mono surface-text-muted">
+            <div class="pt-2 border-t border-slate-200/70 dark:border-slate-700/70 text-[11px] font-mono surface-text-muted adaptive-wrap">
               Pamantayan: <strong>&ge;0.40 Napakahusay</strong> • 0.30–0.39 Mahusay • 0.20–0.29 Katanggap-tanggap • &lt;0.20 Mahina | r<sub>pbis</sub> &ge; 0.25 Katanggap-tanggap
             </div>
           </div>
         </div>
 
         <!-- Integrated Psychometric Synthesis Banner -->
-        <div class="px-4 py-3 squircle-control bg-indigo-500/10 border border-indigo-500/30 text-xs sm:text-sm surface-text-primary flex items-start gap-2.5">
+        <div class="px-4 py-3 squircle-control bg-indigo-500/10 border border-indigo-500/30 text-xs sm:text-sm surface-text-primary flex items-start gap-2.5 adaptive-wrap">
           <i class="fa-solid fa-wand-magic-sparkles text-indigo-600 dark:text-indigo-400 mt-1 shrink-0"></i>
           <div>
             <span class="font-extrabold uppercase text-[11px] tracking-wider text-indigo-700 dark:text-indigo-300 block mb-0.5">
@@ -1327,8 +1293,8 @@
               <h3 class="compact-title text-base sm:text-lg font-extrabold surface-text-primary">
                 Detalyadong Visual Distractor &amp; Bistractor Chart (Upper vs. Lower Group)
               </h3>
-              <p class="text-xs surface-text-muted mt-0.5">
-                Suriin ang distribusyon ng pagpili sa tamang sagot, bawat distractor, at Distractor Discrimination (D<sub>opt</sub>).
+              <p class="text-xs surface-text-muted mt-0.5 adaptive-wrap">
+                Suriin ang distribusyon ng pagpili sa tamang sagot (Good Key / Weak Key), bawat distractor (Effective, Dead, Neutral, Bistractor Flaw), at Distractor Discrimination (D<sub>opt</sub>).
               </p>
             </div>
           </div>
@@ -1344,13 +1310,13 @@
           </div>
         </div>
 
-        <!-- Selected Item Metadata Banner (Includes PU, PL & Interpretation) -->
+        <!-- Selected Item Metadata Banner -->
         <div id="standaloneChartMetaBanner" class="hidden px-4 py-3 squircle-control glass-subcard space-y-1.5 text-xs">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div id="standaloneChartMetaLeft" class="font-bold surface-text-primary"></div>
             <div id="standaloneChartMetaRight" class="flex flex-wrap items-center gap-3 font-mono font-bold"></div>
           </div>
-          <div id="standaloneChartPuPlNote" class="text-[11px] surface-text-secondary border-t border-slate-200/70 dark:border-slate-700/70 pt-1.5"></div>
+          <div id="standaloneChartPuPlNote" class="text-[11px] surface-text-secondary border-t border-slate-200/70 dark:border-slate-700/70 pt-1.5 adaptive-wrap"></div>
         </div>
 
         <!-- Legend -->
@@ -1366,7 +1332,7 @@
         </div>
 
         <!-- Insight Box -->
-        <div id="standaloneChartInsightBox" class="hidden px-4 py-3 squircle-control bg-indigo-500/10 border border-indigo-500/30 text-xs surface-text-secondary flex items-start gap-2">
+        <div id="standaloneChartInsightBox" class="hidden px-4 py-3 squircle-control bg-indigo-500/10 border border-indigo-500/30 text-xs surface-text-secondary flex items-start gap-2 adaptive-wrap">
           <i class="fa-solid fa-circle-info text-indigo-600 dark:text-indigo-400 mt-0.5 shrink-0"></i>
           <p id="standaloneChartInsightText"></p>
         </div>
@@ -1383,7 +1349,7 @@
               <h3 class="compact-title text-base sm:text-lg font-extrabold surface-text-primary">
                 Detalyadong Item Chart (Difficulty P, Discrimination D &amp; Point-Biserial r<sub>pbis</sub>)
               </h3>
-              <p class="text-xs surface-text-muted mt-0.5">
+              <p class="text-xs surface-text-muted mt-0.5 adaptive-wrap">
                 Suriin ang figures bawat aytem o ihambing ang lahat ng aytem mula #1 hanggang #K.
               </p>
             </div>
@@ -1418,7 +1384,7 @@
           <div id="itemChartMetaRight" class="flex items-center gap-3 font-mono font-bold"></div>
         </div>
 
-        <!-- Clean Unified Legend (Bars + Reference Lines Legend, Zero Clutter Inside Plot) -->
+        <!-- Clean Unified Legend -->
         <div class="p-3 squircle-control glass-subcard space-y-2 text-xs">
           <div class="flex flex-wrap items-center gap-4 font-bold surface-text-secondary">
             <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 squircle-sm grad-bar-p inline-block"></span>Difficulty Index (P) [Optimal: 0.20 – 0.80]</span>
@@ -1436,13 +1402,13 @@
           </div>
         </div>
 
-        <!-- Plot Area (Single Item Detailed OR All Items Horizontally Scrollable #1 -> #K) -->
+        <!-- Plot Area -->
         <div id="itemMetricsPlotArea" class="min-h-[220px] flex items-center justify-center">
           <p class="text-xs surface-text-muted italic">Mag-save ng aytem upang makita ang Item Chart (Difficulty at Discrimination Index).</p>
         </div>
 
         <!-- Item Chart Interpretation Box -->
-        <div id="itemChartInterpBox" class="hidden px-4 py-3 squircle-control bg-indigo-500/10 border border-indigo-500/30 text-xs surface-text-secondary flex items-start gap-2">
+        <div id="itemChartInterpBox" class="hidden px-4 py-3 squircle-control bg-indigo-500/10 border border-indigo-500/30 text-xs surface-text-secondary flex items-start gap-2 adaptive-wrap">
           <i class="fa-solid fa-circle-info text-indigo-600 dark:text-indigo-400 mt-0.5 shrink-0"></i>
           <p id="itemChartInterpText"></p>
         </div>
@@ -1452,7 +1418,7 @@
   </div>
 
   <!-- ===================================================================== -->
-  <!-- CUSTOM RESET CONFIRMATION MODAL (No window.confirm)                   -->
+  <!-- CUSTOM RESET CONFIRMATION MODAL                                       -->
   <!-- ===================================================================== -->
   <div id="resetConfirmModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-sm p-4 no-print">
     <div class="glass-panel squircle-card p-6 max-w-md w-full space-y-4 animate-modal-spring">
@@ -1462,7 +1428,7 @@
         </div>
         <div>
           <h3 class="compact-title text-base font-extrabold surface-text-primary">Burahin ang Lahat ng Datos?</h3>
-          <p class="text-xs surface-text-muted mt-0.5">Mabubura ang lahat ng mag-aaral, answer key, mixed parts, at nasuring aytem sa session na ito.</p>
+          <p class="text-xs surface-text-muted mt-0.5 adaptive-wrap">Mabubura ang lahat ng mag-aaral, answer key, mixed parts, at nasuring aytem sa session na ito.</p>
         </div>
       </div>
       <div class="flex justify-end gap-2 pt-2">
@@ -1490,6 +1456,7 @@
         totalN: '',
         formatMode: 'single',
         primaryFormat: 'mc',
+        singleChoiceSet: 'A-D',
         mixedParts: []
       },
       encoder: {
@@ -1570,15 +1537,15 @@
       };
 
       const toast = document.createElement('div');
-      toast.className = `pointer-events-auto px-4 py-3 squircle-control border shadow-xl backdrop-blur-md text-xs font-bold flex items-center gap-2.5 animate-workspace-enter ${styles[type] || styles.info}`;
+      toast.className = `pointer-events-auto px-4 py-3 squircle-control border shadow-xl backdrop-blur-md text-xs font-bold flex items-center gap-2.5 animate-workspace-enter adaptive-wrap ${styles[type] || styles.info}`;
       toast.innerHTML = `<i class="fa-solid ${icons[type] || icons.info} text-sm shrink-0"></i><span>${escapeHtml(message)}</span>`;
       container.appendChild(toast);
 
       setTimeout(() => {
         toast.style.opacity = '0';
         toast.style.transform = 'translateY(8px)';
-        toast.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
-        setTimeout(() => toast.remove(), 260);
+        toast.style.transition = 'opacity 0.28s ease, transform 0.28s ease';
+        setTimeout(() => toast.remove(), 290);
       }, 3200);
     }
 
@@ -1676,10 +1643,8 @@
           renderAnswerKeyPreview();
           gradeAndRankRoster();
           renderMixedPartsList();
-          renderOptionMatrixUI();
           renderSavedItemsLog();
           updateSummaryDashboard();
-          checkItemNumberLimitGuard();
           switchWorkspaceTab(state.activeTab || 'encoder', false);
           persistState();
           showToast('Matagumpay na na-restore ang session mula sa JSON!', 'success');
@@ -1715,6 +1680,7 @@
           totalN: '',
           formatMode: 'single',
           primaryFormat: 'mc',
+          singleChoiceSet: 'A-D',
           mixedParts: []
         },
         encoder: {
@@ -1734,21 +1700,154 @@
       syncMetaInputsToUI();
       document.getElementById('bulkAnswerKeyInput').value = '';
       document.getElementById('bulkStudentsPasteInput').value = '';
-      document.getElementById('itemNumberInput').value = 1;
       renderAnswerKeyPreview();
       gradeAndRankRoster();
       renderMixedPartsList();
-      renderOptionMatrixUI();
       renderSavedItemsLog();
       updateSummaryDashboard();
-      checkItemNumberLimitGuard();
       switchWorkspaceTab('encoder', false);
       showToast('Na-reset na ang lahat ng datos.', 'info');
     }
 
     /* ===================================================================== */
-    /* METADATA, SINGLE-FORMAT VS MIXED-FORMAT & MIXED PARTS RANGE BUILDER   */
+    /* METADATA, SINGLE-FORMAT VS MIXED-FORMAT & DYNAMIC CHOICE-SET ENGINE   */
     /* ===================================================================== */
+    const FORMAT_TYPE_LABELS = {
+      mc: 'Multiple Choice',
+      tf: 'True or False (T/F o T/M)',
+      mt: 'Matching Type',
+      id: 'Identification'
+    };
+
+    function expandLetterRange(rangeStr, fallbackEnd = 'D') {
+      const clean = String(rangeStr || '').trim().toUpperCase().replace(/\s+/g, '');
+      const match = clean.match(/^([A-Z])[-–—]([A-Z])$/);
+      let startCode = 65;
+      let endCode = fallbackEnd.charCodeAt(0);
+      if (match) {
+        startCode = match[1].charCodeAt(0);
+        endCode = match[2].charCodeAt(0);
+        if (endCode < startCode) {
+          const tmp = startCode;
+          startCode = endCode;
+          endCode = tmp;
+        }
+      }
+      const list = [];
+      for (let c = startCode; c <= Math.min(90, endCode); c++) {
+        list.push(String.fromCharCode(c));
+      }
+      return list.length >= 2 ? list : ['A', 'B', 'C', 'D'];
+    }
+
+    function detectTfPairForRange(startItem = 1, endItem = null) {
+      const key = state.encoder.answerKey || [];
+      const students = state.encoder.students || [];
+      const maxIdx = endItem ? Math.min(key.length, endItem) : key.length;
+      let hasM = false;
+      let hasF = false;
+
+      for (let idx = Math.max(0, startItem - 1); idx < maxIdx; idx++) {
+        const kTok = normalizeResponseToken(key[idx]);
+        if (kTok === 'M') hasM = true;
+        if (kTok === 'F') hasF = true;
+        students.forEach((st) => {
+          const sTok = normalizeResponseToken(st.answers[idx]);
+          if (sTok === 'M') hasM = true;
+          if (sTok === 'F') hasF = true;
+        });
+      }
+
+      if (hasM && !hasF) return ['T', 'M'];
+      return ['T', 'F'];
+    }
+
+    function setSingleChoiceSet(choiceSetVal) {
+      state.meta.singleChoiceSet = choiceSetVal;
+      syncSingleChoiceSetUI();
+      persistState();
+    }
+
+    function handleSingleMtRangeInput() {
+      const inputEl = document.getElementById('singleMtRangeInput');
+      if (!inputEl) return;
+      const raw = inputEl.value.trim().toUpperCase();
+      state.meta.singleChoiceSet = raw || 'A-F';
+      const letters = expandLetterRange(state.meta.singleChoiceSet, 'F');
+      const previewEl = document.getElementById('singleMtParsedPreview');
+      if (previewEl) {
+        previewEl.textContent = `Mga Opsyon (${letters.length}): ${letters.join(', ')}`;
+      }
+      persistState();
+    }
+
+    function syncSingleChoiceSetUI() {
+      const primary = state.meta.primaryFormat || 'mc';
+      const lockedLabel = document.getElementById('singleLockedFormatLabel');
+      if (lockedLabel) lockedLabel.textContent = FORMAT_TYPE_LABELS[primary] || 'Multiple Choice';
+
+      const mcWrap = document.getElementById('singleChoiceMcWrap');
+      const tfWrap = document.getElementById('singleChoiceTfWrap');
+      const mtWrap = document.getElementById('singleChoiceMtWrap');
+      const idWrap = document.getElementById('singleChoiceIdWrap');
+
+      if (mcWrap) mcWrap.classList.toggle('hidden', primary !== 'mc');
+      if (tfWrap) tfWrap.classList.toggle('hidden', primary !== 'tf');
+      if (mtWrap) mtWrap.classList.toggle('hidden', primary !== 'mt');
+      if (idWrap) idWrap.classList.toggle('hidden', primary !== 'id');
+
+      const activePill = 'silky-btn py-1.5 px-2 squircle-sm text-xs font-mono font-extrabold border cursor-pointer grad-select-pill on-gradient-text';
+      const inactivePill = 'silky-btn py-1.5 px-2 squircle-sm text-xs font-mono font-extrabold border border-slate-300 dark:border-slate-700 glass-subcard surface-text-secondary cursor-pointer';
+
+      if (primary === 'mc') {
+        const cur = ['A-C', 'A-D', 'A-E'].includes(state.meta.singleChoiceSet) ? state.meta.singleChoiceSet : 'A-D';
+        state.meta.singleChoiceSet = cur;
+        const bAC = document.getElementById('btnSingleMcAC');
+        const bAD = document.getElementById('btnSingleMcAD');
+        const bAE = document.getElementById('btnSingleMcAE');
+        if (bAC) bAC.className = cur === 'A-C' ? activePill : inactivePill;
+        if (bAD) bAD.className = cur === 'A-D' ? activePill : inactivePill;
+        if (bAE) bAE.className = cur === 'A-E' ? activePill : inactivePill;
+      } else if (primary === 'tf') {
+        let cur = state.meta.singleChoiceSet;
+        const detected = detectTfPairForRange(1, null);
+        if (cur !== 'T/F' && cur !== 'T/M') {
+          cur = detected.join('/');
+          state.meta.singleChoiceSet = cur;
+        }
+        const bTF = document.getElementById('btnSingleTfTF');
+        const bTM = document.getElementById('btnSingleTfTM');
+        const badge = document.getElementById('singleTfSmartBadge');
+        if (bTF) bTF.className = cur === 'T/F' ? activePill : inactivePill;
+        if (bTM) bTM.className = cur === 'T/M' ? activePill : inactivePill;
+        if (badge) badge.textContent = `Smart Detect: ${detected.join('/')}`;
+      } else if (primary === 'mt') {
+        const cur = /^[A-Z][-–—][A-Z]$/i.test(state.meta.singleChoiceSet || '') ? state.meta.singleChoiceSet.toUpperCase() : 'A-F';
+        state.meta.singleChoiceSet = cur;
+        const mtInput = document.getElementById('singleMtRangeInput');
+        if (mtInput && mtInput.value.toUpperCase() !== cur) mtInput.value = cur;
+        const letters = expandLetterRange(cur, 'F');
+        const previewEl = document.getElementById('singleMtParsedPreview');
+        if (previewEl) previewEl.textContent = `Mga Opsyon (${letters.length}): ${letters.join(', ')}`;
+      } else if (primary === 'id') {
+        state.meta.singleChoiceSet = 'Tama/Mali';
+      }
+    }
+
+    function updateMixedRangeChoiceUI() {
+      const typeEl = document.getElementById('mixedRangeType');
+      const rType = typeEl ? typeEl.value : 'mc';
+      const mcW = document.getElementById('mixedChoiceMcWrap');
+      const tfW = document.getElementById('mixedChoiceTfWrap');
+      const mtW = document.getElementById('mixedChoiceMtWrap');
+      const idW = document.getElementById('mixedChoiceIdWrap');
+
+      if (mcW) mcW.classList.toggle('hidden', rType !== 'mc');
+      if (tfW) tfW.classList.toggle('hidden', rType !== 'tf');
+      if (mtW) mtW.classList.toggle('hidden', rType !== 'mt');
+      if (idW) idW.classList.toggle('hidden', rType !== 'id');
+    }
+
     function syncMetaInputsToUI() {
       document.getElementById('metaTeacher').value = state.meta.teacher || '';
       document.getElementById('metaSchool').value = state.meta.school || '';
@@ -1763,6 +1862,7 @@
         state.meta.totalItems || (state.encoder.answerKey || []).length || 0;
 
       applyTestFormatModeUI();
+      updateMixedRangeChoiceUI();
       renderMixedPartsList();
     }
 
@@ -1784,7 +1884,6 @@
         state.meta.totalItems || (state.encoder.answerKey || []).length || 0;
       gradeAndRankRoster();
       updateSummaryDashboard();
-      checkItemNumberLimitGuard();
       persistState();
     }
 
@@ -1792,20 +1891,21 @@
       state.meta.formatMode = mode === 'mixed' ? 'mixed' : 'single';
       if (state.meta.formatMode === 'single') {
         state.currentItem.type = state.meta.primaryFormat || 'mc';
-      } else {
-        applyMixedRangeTypeForItem(parseInt(document.getElementById('itemNumberInput').value, 10) || 1);
       }
       applyTestFormatModeUI();
-      renderOptionMatrixUI();
       persistState();
     }
 
     function handleSingleFormatPrimaryChange() {
       const val = document.getElementById('metaPrimaryFormat').value || 'mc';
       state.meta.primaryFormat = val;
+      if (val === 'mc') state.meta.singleChoiceSet = 'A-D';
+      else if (val === 'tf') state.meta.singleChoiceSet = detectTfPairForRange(1, null).join('/');
+      else if (val === 'mt') state.meta.singleChoiceSet = 'A-F';
+      else if (val === 'id') state.meta.singleChoiceSet = 'Tama/Mali';
+
       if (state.meta.formatMode === 'single') {
         state.currentItem.type = val;
-        renderOptionMatrixUI();
       }
       applyTestFormatModeUI();
       persistState();
@@ -1817,7 +1917,7 @@
       const btnMixed = document.getElementById('btnFormatMixed');
       const singleWrap = document.getElementById('singlePrimaryWrap');
       const mixedNote = document.getElementById('mixedFormatNoteWrap');
-      const lockBadge = document.getElementById('singleFormatLockBadge');
+      const singleChoiceCard = document.getElementById('singleFormatChoiceSetCard');
       const mixedPartsCard = document.getElementById('mixedFormatPartsCard');
 
       const activeBtnClass = 'silky-btn px-3 py-2 squircle-sm text-xs font-extrabold cursor-pointer grad-select-pill on-gradient-text';
@@ -1828,60 +1928,47 @@
         btnMixed.className = inactiveBtnClass;
         singleWrap.classList.remove('hidden');
         mixedNote.classList.add('hidden');
+        if (singleChoiceCard) singleChoiceCard.classList.remove('hidden');
         if (mixedPartsCard) mixedPartsCard.classList.add('hidden');
-
-        const primary = state.meta.primaryFormat || 'mc';
-        state.currentItem.type = primary;
-
-        const labels = {
-          mc: 'Multiple Choice',
-          tf: 'True or False',
-          mt: 'Matching Type',
-          id: 'Identification'
-        };
-        if (lockBadge) {
-          lockBadge.classList.remove('hidden');
-          lockBadge.innerHTML = `<i class="fa-solid fa-lock"></i><span>Naka-lock sa Single-Format (${labels[primary] || 'Multiple Choice'})</span>`;
-        }
+        state.currentItem.type = state.meta.primaryFormat || 'mc';
+        syncSingleChoiceSetUI();
       } else {
         btnMixed.className = activeBtnClass;
         btnSingle.className = inactiveBtnClass;
         singleWrap.classList.add('hidden');
         mixedNote.classList.remove('hidden');
+        if (singleChoiceCard) singleChoiceCard.classList.add('hidden');
         if (mixedPartsCard) mixedPartsCard.classList.remove('hidden');
-        if (lockBadge) {
-          lockBadge.classList.add('hidden');
-        }
       }
-
-      updateItemTypeButtonsUI();
     }
 
-    function getFormatTypeForItemNumber(itemNum) {
+    function getFormatSpecForItemNumber(itemNum) {
       if (state.meta.formatMode !== 'mixed') {
-        return state.meta.primaryFormat || 'mc';
+        const primary = state.meta.primaryFormat || 'mc';
+        return {
+          type: primary,
+          choiceSet: state.meta.singleChoiceSet || (primary === 'mt' ? 'A-F' : primary === 'tf' ? 'AUTO' : primary === 'id' ? 'Tama/Mali' : 'A-D'),
+          start: 1,
+          end: null
+        };
       }
       const parts = state.meta.mixedParts || [];
       const matched = parts.find((p) => itemNum >= Number(p.start) && itemNum <= Number(p.end));
-      return matched ? matched.type : (state.currentItem.type || 'mc');
-    }
-
-    function applyMixedRangeTypeForItem(itemNum) {
-      if (state.meta.formatMode !== 'mixed') return;
-      const parts = state.meta.mixedParts || [];
-      const matched = parts.find((p) => itemNum >= Number(p.start) && itemNum <= Number(p.end));
-      const tag = document.getElementById('mixedActiveRangeTag');
-
       if (matched) {
-        state.currentItem.type = matched.type;
-        if (tag) {
-          tag.textContent = `Saklaw: Aytem #${matched.start}–#${matched.end}`;
-        }
-      } else if (tag) {
-        tag.textContent = 'Manual na Pagpili';
+        return {
+          type: matched.type,
+          choiceSet: matched.choiceSet || (matched.type === 'mt' ? 'A-F' : matched.type === 'tf' ? 'AUTO' : matched.type === 'id' ? 'Tama/Mali' : 'A-D'),
+          start: Number(matched.start),
+          end: Number(matched.end)
+        };
       }
-      updateItemTypeButtonsUI();
-      renderOptionMatrixUI();
+      const fallbackType = state.meta.primaryFormat || 'mc';
+      return {
+        type: fallbackType,
+        choiceSet: fallbackType === 'mt' ? 'A-F' : fallbackType === 'tf' ? 'AUTO' : fallbackType === 'id' ? 'Tama/Mali' : 'A-D',
+        start: 1,
+        end: null
+      };
     }
 
     function addMixedFormatPart() {
@@ -1894,27 +1981,39 @@
         return;
       }
 
+      let choiceSet = 'A-D';
+      if (type === 'mc') {
+        choiceSet = document.getElementById('mixedMcChoiceSelect').value || 'A-D';
+      } else if (type === 'tf') {
+        choiceSet = document.getElementById('mixedTfChoiceSelect').value || 'AUTO';
+      } else if (type === 'mt') {
+        const rawMt = (document.getElementById('mixedMtRangeInput').value || 'A-F').trim().toUpperCase();
+        if (!/^[A-Z][-–—][A-Z]$/.test(rawMt)) {
+          showToast('Ilagay ang wastong hanay ng pagpipilian sa Matching Type (hal. A-D o A-F).', 'warning');
+          return;
+        }
+        choiceSet = rawMt;
+      } else if (type === 'id') {
+        choiceSet = 'Tama/Mali';
+      }
+
       state.meta.mixedParts = (state.meta.mixedParts || []).filter(
         (p) => end < p.start || start > p.end
       );
-      state.meta.mixedParts.push({ start, end, type });
+      state.meta.mixedParts.push({ start, end, type, choiceSet });
       state.meta.mixedParts.sort((a, b) => a.start - b.start);
 
       document.getElementById('mixedRangeStart').value = '';
       document.getElementById('mixedRangeEnd').value = '';
 
       renderMixedPartsList();
-      const curItemNum = parseInt(document.getElementById('itemNumberInput').value, 10) || 1;
-      applyMixedRangeTypeForItem(curItemNum);
       persistState();
-      showToast(`Naitakda ang Mula Aytem ${start} hanggang Aytem ${end}.`, 'success');
+      showToast(`Naitakda: Aytem ${start}–${end} (${FORMAT_TYPE_LABELS[type]} • ${choiceSet}).`, 'success');
     }
 
     function removeMixedFormatPart(idx) {
       state.meta.mixedParts.splice(idx, 1);
       renderMixedPartsList();
-      const curItemNum = parseInt(document.getElementById('itemNumberInput').value, 10) || 1;
-      applyMixedRangeTypeForItem(curItemNum);
       persistState();
     }
 
@@ -1923,23 +2022,17 @@
       if (!wrap) return;
       const parts = state.meta.mixedParts || [];
       if (parts.length === 0) {
-        wrap.innerHTML = '<span class="text-[11px] surface-text-muted italic">Wala pang naitakdang saklaw ng bahagi. Pwedeng magtakda sa itaas o pumili nang direkta sa ibaba.</span>';
+        wrap.innerHTML = '<span class="text-[11px] surface-text-muted italic">Wala pang naitakdang saklaw ng bahagi. Pwedeng magtakda sa itaas.</span>';
         return;
       }
-
-      const typeNames = {
-        mc: 'Multiple Choice',
-        tf: 'True or False',
-        mt: 'Matching Type',
-        id: 'Identification'
-      };
 
       wrap.innerHTML = parts
         .map(
           (p, idx) => `
             <span class="inline-flex items-center gap-1.5 px-2.5 py-1 squircle-sm bg-white/80 dark:bg-slate-900/80 border border-indigo-500/40 text-[11px] font-bold surface-text-primary">
               <span class="font-mono text-indigo-700 dark:text-indigo-300">Mula Aytem ${p.start}–${p.end}:</span>
-              <span>${typeNames[p.type] || p.type}</span>
+              <span>${FORMAT_TYPE_LABELS[p.type] || p.type}</span>
+              <span class="px-1.5 py-0.5 squircle-sm bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 font-mono text-[10px]">${escapeHtml(p.choiceSet || '')}</span>
               <button type="button" onclick="removeMixedFormatPart(${idx})" class="ml-1 text-rose-500 hover:text-rose-700 cursor-pointer" title="Alisin ang bahaging ito">
                 <i class="fa-solid fa-xmark"></i>
               </button>
@@ -1947,50 +2040,6 @@
           `
         )
         .join('');
-    }
-
-    function handleItemNumberChange() {
-      checkItemNumberLimitGuard();
-      const itemNum = parseInt(document.getElementById('itemNumberInput').value, 10) || 1;
-      if (state.meta.formatMode === 'mixed') {
-        applyMixedRangeTypeForItem(itemNum);
-      }
-    }
-
-    function selectItemType(type) {
-      if (state.meta.formatMode === 'single') {
-        const primary = state.meta.primaryFormat || 'mc';
-        if (type !== primary) {
-          showToast('Naka-lock sa Single-Format ang uri ng aytem. Piliin ang Mixed-Format sa itaas kung iba-iba ang uri.', 'warning');
-          return;
-        }
-      }
-      state.currentItem.type = type;
-      state.currentItem.counts = {};
-      updateItemTypeButtonsUI();
-      renderOptionMatrixUI();
-      persistState();
-    }
-
-    function updateItemTypeButtonsUI() {
-      const types = ['mc', 'tf', 'mt', 'id'];
-      const isSingle = state.meta.formatMode === 'single';
-      const activeType = state.currentItem.type || 'mc';
-
-      types.forEach((t) => {
-        const btn = document.getElementById(`itemTypeBtn_${t}`);
-        if (!btn) return;
-        const isSelected = t === activeType;
-        const isLockedOut = isSingle && !isSelected;
-
-        if (isSelected) {
-          btn.className = 'silky-btn p-3 squircle-control border text-xs font-extrabold flex flex-col items-center justify-center gap-1.5 cursor-pointer grad-select-pill on-gradient-text shadow';
-        } else if (isLockedOut) {
-          btn.className = 'silky-btn p-3 squircle-control border text-xs font-bold flex flex-col items-center justify-center gap-1.5 opacity-45 cursor-not-allowed glass-subcard surface-text-muted';
-        } else {
-          btn.className = 'silky-btn p-3 squircle-control border text-xs font-extrabold flex flex-col items-center justify-center gap-1.5 cursor-pointer glass-subcard surface-text-secondary hover:border-indigo-500/50';
-        }
-      });
     }
 
     /* ===================================================================== */
@@ -2032,16 +2081,25 @@
     /* ===================================================================== */
     /* TAB 1: ANSWER KEY, BULK PASTE, 27% RULE & DEPED MASTERY BANDS         */
     /* ===================================================================== */
+    function normalizeResponseToken(rawToken) {
+      const tok = String(rawToken || '').trim().toUpperCase();
+      if (!tok) return '';
+      if (tok === 'TRUE' || tok === 'TAMA') return 'T';
+      if (tok === 'FALSE') return 'F';
+      if (tok === 'MALI') return 'M';
+      return tok;
+    }
+
     function parseTokenList(rawStr) {
       const trimmed = String(rawStr || '').trim().toUpperCase();
       if (!trimmed) return [];
       if (trimmed.includes('\t') || trimmed.includes(',') || trimmed.includes(' ')) {
         return trimmed
           .split(/[\t,\s]+/)
-          .map((x) => x.trim())
+          .map((x) => normalizeResponseToken(x))
           .filter(Boolean);
       }
-      return trimmed.split('');
+      return trimmed.split('').map((x) => normalizeResponseToken(x)).filter(Boolean);
     }
 
     function applyBulkAnswerKey() {
@@ -2058,9 +2116,12 @@
       }
       document.getElementById('encoderTargetTotalItems').textContent =
         state.meta.totalItems || tokens.length;
+      if (state.meta.formatMode !== 'mixed' && state.meta.primaryFormat === 'tf') {
+        state.meta.singleChoiceSet = detectTfPairForRange(1, null).join('/');
+        syncSingleChoiceSetUI();
+      }
       renderAnswerKeyPreview();
       gradeAndRankRoster();
-      checkItemNumberLimitGuard();
       persistState();
       showToast(`Nai-set ang Answer Key (${tokens.length} aytem).`, 'success');
     }
@@ -2107,7 +2168,7 @@
           if (parts.length === 2) {
             ansTokens = parseTokenList(parts[1]);
           } else {
-            ansTokens = parts.slice(1).map((a) => a.toUpperCase()).filter(Boolean);
+            ansTokens = parts.slice(1).map((a) => normalizeResponseToken(a)).filter(Boolean);
           }
         } else if (line.includes(',')) {
           const parts = line.split(',').map((p) => p.trim()).filter(Boolean);
@@ -2116,7 +2177,7 @@
             if (parts.length === 2) {
               ansTokens = parseTokenList(parts[1]);
             } else {
-              ansTokens = parts.slice(1).map((a) => a.toUpperCase());
+              ansTokens = parts.slice(1).map((a) => normalizeResponseToken(a)).filter(Boolean);
             }
           }
         } else {
@@ -2233,7 +2294,6 @@
 
       renderAnswerKeyPreview();
       gradeAndRankRoster();
-      checkItemNumberLimitGuard();
       persistState();
       showToast('Na-load ang sample dataset (10 aytem, 20 mag-aaral).', 'success');
     }
@@ -2285,12 +2345,59 @@
     }
 
     function classifyDepEdNatMps(mps) {
-      if (mps >= 96) return { label: 'Mastered (96–100%)', pillClass: 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border-emerald-500/40' };
-      if (mps >= 86) return { label: 'Closely Approximating Mastery (86–95%)', pillClass: 'bg-blue-500/15 text-blue-700 dark:text-blue-300 border-blue-500/40' };
-      if (mps >= 66) return { label: 'Moving Towards Mastery (66–85%)', pillClass: 'bg-teal-500/15 text-teal-700 dark:text-teal-300 border-teal-500/40' };
-      if (mps >= 35) return { label: 'Average Mastery (35–65%)', pillClass: 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border-amber-500/40' };
-      if (mps >= 15) return { label: 'Low Mastery (15–34%)', pillClass: 'bg-orange-500/15 text-orange-700 dark:text-orange-300 border-orange-500/40' };
-      return { label: 'Very Low / No Mastery (< 15%)', pillClass: 'bg-rose-500/15 text-rose-700 dark:text-rose-300 border-rose-500/40' };
+      if (mps >= 96) {
+        return {
+          label: 'Mastered (96–100%)',
+          pillClass: 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border-emerald-500/40',
+          interp: 'Napakataas ng antas ng pagkatuto (Mastered). Halos lahat ng kasanayan sa pagsusulit ay lubusang naunawaan at naisabuhay ng klase.'
+        };
+      }
+      if (mps >= 86) {
+        return {
+          label: 'Closely Approximating Mastery (86–95%)',
+          pillClass: 'bg-blue-500/15 text-blue-700 dark:text-blue-300 border-blue-500/40',
+          interp: 'Malapit na sa ganap na pagkatuto (Closely Approximating Mastery). Handang-handa na ang klase sa susunod na mas mataas na kasanayan; magbigay ng enrichment activities.'
+        };
+      }
+      if (mps >= 66) {
+        return {
+          label: 'Moving Towards Mastery (66–85%)',
+          pillClass: 'bg-teal-500/15 text-teal-700 dark:text-teal-300 border-teal-500/40',
+          interp: 'Patungo na sa pagkatuto (Moving Towards Mastery). Karamihan sa pangunahing kasanayan ay nakuha na, bagaman may ilang aytem na nangangailangan ng pagpapatibay.'
+        };
+      }
+      if (mps >= 35) {
+        return {
+          label: 'Average Mastery (35–65%)',
+          pillClass: 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border-amber-500/40',
+          interp: 'Katamtamang antas lamang (Average Mastery). Kalahati lamang ng mga kasanayan ang natamo — kailangan ng targeted review at remedial instruction sa mga least-mastered competencies.'
+        };
+      }
+      if (mps >= 15) {
+        return {
+          label: 'Low Mastery (15–34%)',
+          pillClass: 'bg-orange-500/15 text-orange-700 dark:text-orange-300 border-orange-500/40',
+          interp: 'Mababang antas ng pagkatuto (Low Mastery). Malaking bahagi ng aralin ang hindi pa naunawaan; inirerekomenda ang muling pagtuturo (reteaching) gamit ang alternatibong estratehiya.'
+        };
+      }
+      return {
+        label: 'Very Low / No Mastery (< 15%)',
+        pillClass: 'bg-rose-500/15 text-rose-700 dark:text-rose-300 border-rose-500/40',
+        interp: 'Napakababang antas (Very Low / No Mastery). Kritikal na pangangailangan para sa komprehensibong remediation at pagsusuri sa kahirapan ng pagsusulit.'
+      };
+    }
+
+    function interpretAchievedMpl(passRatePct, passedCount, totalN) {
+      if (passRatePct >= 75) {
+        return `Mataas ang Achieved MPL (${passedCount}/${totalN} o ${passRatePct}% ng klase ang nakapasa sa ≥75% standard ng DO 015, s. 2026). Matagumpay ang pagtuturo sa pangkalahatan; magbigay lamang ng tulong sa natitirang ${totalN - passedCount} mag-aaral.`;
+      }
+      if (passRatePct >= 50) {
+        return `Katamtaman ang Achieved MPL (${passedCount}/${totalN} o ${passRatePct}% ang nakapasa). Lagpas sa kalahati ang nakaabot sa passing standard, ngunit may ${totalN - passedCount} mag-aaral sa Developing/Emerging bands na nangangailangan ng targeted intervention.`;
+      }
+      if (passRatePct >= 25) {
+        return `Mababa ang Achieved MPL (${passedCount}/${totalN} o ${passRatePct}% lamang ang nakapasa). Karamihan sa klase ay hindi pa naaabot ang 75% proficiency level — kailangan ng muling pagtalakay (reteaching) sa mga pangunahing kasanayan.`;
+      }
+      return `Kritikal ang Achieved MPL (${passedCount}/${totalN} o ${passRatePct}% lamang ang nakapasa). Kinakailangan ng agarang intensive remediation at early intervention alinsunod sa DepEd Order No. 015, s. 2026.`;
     }
 
     function updateDepEdClassPerformanceDashboard(students, targetK) {
@@ -2301,6 +2408,11 @@
       const mplRateEl = document.getElementById('classMplPassRateText');
       const synthNoteEl = document.getElementById('classDepedSynthesisNote');
       const bandsListEl = document.getElementById('depedBandsList');
+
+      const mpsRubricBadge = document.getElementById('mpsRubricCurrentBadge');
+      const mpsRubricInterp = document.getElementById('mpsRubricInterpretationText');
+      const mplRubricBadge = document.getElementById('mplRubricCurrentBadge');
+      const mplRubricInterp = document.getElementById('mplRubricInterpretationText');
 
       if (!bandsListEl) return;
 
@@ -2326,6 +2438,15 @@
         if (mpsSubEl) mpsSubEl.textContent = 'MPS: 0.00%';
         if (mplRateEl) mplRateEl.textContent = '0 / 0 (0%)';
         if (synthNoteEl) synthNoteEl.textContent = 'I-encode ang Answer Key at mga sagot ng mag-aaral upang makita ang opisyal na DepEd NAT MPS classification at DO 015, s. 2026 proficiency distribution.';
+
+        if (mpsRubricBadge) mpsRubricBadge.textContent = 'MPS: 0.00%';
+        if (mpsRubricInterp) {
+          mpsRubricInterp.innerHTML = 'Ang <strong>Class Mean Percentage Score (MPS)</strong> ay ang porsyento ng tamang sagot ng buong klase mula sa kabuuang bilang ng aytem (K). Mag-encode ng datos upang makita ang interpretasyon.';
+        }
+        if (mplRubricBadge) mplRubricBadge.textContent = 'MPL Pass: 0%';
+        if (mplRubricInterp) {
+          mplRubricInterp.innerHTML = 'Ang <strong>Achieved Minimum Proficiency Level (MPL)</strong> ay sumusukat sa porsyento ng mga mag-aaral na nakakuha ng hindi bababa sa <strong>75% raw score</strong> (Connecting, Benchmarking, o Advancing).';
+        }
 
         bandsListEl.innerHTML = bandsMeta
           .map(
@@ -2369,6 +2490,16 @@
       if (meanScoreEl) meanScoreEl.textContent = `${meanScore.toFixed(2)} / ${denomK}`;
       if (mpsSubEl) mpsSubEl.textContent = `MPS: ${mps.toFixed(2)}%`;
       if (mplRateEl) mplRateEl.textContent = `${passedCount} / ${N} (${passRate}%)`;
+
+      if (mpsRubricBadge) mpsRubricBadge.textContent = `MPS: ${mps.toFixed(2)}% (${natInfo.label.split(' (')[0]})`;
+      if (mpsRubricInterp) {
+        mpsRubricInterp.innerHTML = `<strong>Resulta ng Klase (${mps.toFixed(2)}%):</strong> ${escapeHtml(natInfo.interp)}`;
+      }
+
+      if (mplRubricBadge) mplRubricBadge.textContent = `MPL Pass: ${passedCount}/${N} (${passRate}%)`;
+      if (mplRubricInterp) {
+        mplRubricInterp.innerHTML = `<strong>Resulta ng Klase (${passRate}%):</strong> ${escapeHtml(interpretAchievedMpl(passRate, passedCount, N))}`;
+      }
 
       const needIntervention = counts.developing + counts.emerging;
       if (synthNoteEl) {
@@ -2494,11 +2625,11 @@
 
       tbody.innerHTML = '';
       students.forEach((st, idx) => {
-        let groupPill = '<span class="px-2.5 py-0.5 squircle-sm text-[11px] font-semibold bg-slate-500/15 surface-text-secondary border border-slate-400/30">Middle 46%</span>';
+        let groupPill = '<span class="squircle-badge-adaptive text-[11px] font-semibold bg-slate-500/15 surface-text-secondary border border-slate-400/30"><span>Middle 46%</span></span>';
         if (st.group === 'Upper') {
-          groupPill = '<span class="px-2.5 py-0.5 squircle-sm text-[11px] font-bold bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40">Top 27% (Upper)</span>';
+          groupPill = '<span class="squircle-badge-adaptive text-[11px] font-bold bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40"><span>Top 27%</span><span class="text-[10px] opacity-90">(Upper)</span></span>';
         } else if (st.group === 'Lower') {
-          groupPill = '<span class="px-2.5 py-0.5 squircle-sm text-[11px] font-bold bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/40">Bottom 27% (Lower)</span>';
+          groupPill = '<span class="squircle-badge-adaptive text-[11px] font-bold bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/40"><span>Bottom 27%</span><span class="text-[10px] opacity-90">(Lower)</span></span>';
         }
 
         const denom = Math.max(1, targetK || state.encoder.answerKey.length || 1);
@@ -2519,7 +2650,7 @@
           <td class="p-3 font-bold surface-text-primary">${escapeHtml(st.name)}${warningTag}</td>
           <td class="p-3 font-mono text-xs surface-text-secondary max-w-[200px] truncate">${escapeHtml(st.answers.join(', '))}</td>
           <td class="p-3 font-mono font-extrabold ${isInvalid ? 'text-rose-600 dark:text-rose-400' : 'text-indigo-700 dark:text-indigo-300'}">${st.score} / ${denom} <span class="text-[11px] font-normal surface-text-muted">(${pctScore}%)</span></td>
-          <td class="p-3"><span class="px-2 py-0.5 squircle-sm text-[10px] font-extrabold border ${depedBand.pillClass}">${depedBand.shortLabel}</span></td>
+          <td class="p-3"><span class="squircle-badge-adaptive text-[10px] font-extrabold border ${depedBand.pillClass}">${depedBand.shortLabel}</span></td>
           <td class="p-3">${groupPill}</td>
           <td class="p-3 text-right">
             <button type="button" onclick="deleteRosterStudent(${idx})" class="silky-btn p-1.5 squircle-sm text-rose-600 hover:bg-rose-500/15 cursor-pointer" title="Tanggalin ang mag-aaral">
@@ -2532,7 +2663,7 @@
     }
 
     /* ===================================================================== */
-    /* POINT-BISERIAL CORRELATION (r_pbis) COMPUTATION FROM ROSTER           */
+    /* POINT-BISERIAL CORRELATION (r_pbis) & BULK ROSTER ANALYZER            */
     /* ===================================================================== */
     function computePointBiserialForItem(itemIndex) {
       const key = state.encoder.answerKey || [];
@@ -2594,26 +2725,38 @@
         return;
       }
 
-      document.getElementById('groupSizeNInput').value = nGroup;
+      const groupInput = document.getElementById('groupSizeNInput');
+      if (groupInput) groupInput.value = nGroup;
       const newRecords = [];
 
       key.forEach((correctOpt, idx) => {
         const itemNum = idx + 1;
-        const itemType = getFormatTypeForItemNumber(itemNum);
+        const spec = getFormatSpecForItemNumber(itemNum);
+        const itemType = spec.type;
 
         let optionsList = ['A', 'B', 'C', 'D'];
         if (itemType === 'tf') {
-          optionsList = ['T', 'F'];
+          if (spec.choiceSet === 'T/M') {
+            optionsList = ['T', 'M'];
+          } else if (spec.choiceSet === 'T/F') {
+            optionsList = ['T', 'F'];
+          } else {
+            optionsList = detectTfPairForRange(spec.start || 1, spec.end || null);
+          }
         } else if (itemType === 'id') {
           optionsList = ['Tama', 'Mali'];
+        } else if (itemType === 'mt') {
+          optionsList = expandLetterRange(spec.choiceSet || 'A-F', 'F');
+          if (correctOpt && /^[A-Z]$/.test(correctOpt) && !optionsList.includes(correctOpt)) {
+            optionsList.push(correctOpt);
+            optionsList.sort();
+          }
         } else {
-          const observedSet = new Set(['A', 'B', 'C', 'D']);
-          if (correctOpt) observedSet.add(correctOpt);
-          students.forEach((s) => {
-            const ans = (s.answers[idx] || '').toUpperCase();
-            if (/^[A-F]$/.test(ans)) observedSet.add(ans);
-          });
-          optionsList = Array.from(observedSet).sort();
+          optionsList = expandLetterRange(spec.choiceSet || 'A-D', 'D');
+          if (correctOpt && /^[A-Z]$/.test(correctOpt) && !optionsList.includes(correctOpt)) {
+            optionsList.push(correctOpt);
+            optionsList.sort();
+          }
         }
 
         const counts = {};
@@ -2623,22 +2766,22 @@
 
         if (itemType === 'id') {
           upperGroup.forEach((s) => {
-            const ans = (s.answers[idx] || '').toUpperCase();
+            const ans = normalizeResponseToken(s.answers[idx]);
             if (ans === correctOpt) counts['Tama'].u++;
             else counts['Mali'].u++;
           });
           lowerGroup.forEach((s) => {
-            const ans = (s.answers[idx] || '').toUpperCase();
+            const ans = normalizeResponseToken(s.answers[idx]);
             if (ans === correctOpt) counts['Tama'].l++;
             else counts['Mali'].l++;
           });
         } else {
           upperGroup.forEach((s) => {
-            const ans = (s.answers[idx] || '').toUpperCase();
+            const ans = normalizeResponseToken(s.answers[idx]);
             if (counts[ans]) counts[ans].u++;
           });
           lowerGroup.forEach((s) => {
-            const ans = (s.answers[idx] || '').toUpperCase();
+            const ans = normalizeResponseToken(s.answers[idx]);
             if (counts[ans]) counts[ans].l++;
           });
         }
@@ -2658,200 +2801,17 @@
       });
 
       state.savedItems = newRecords;
-      const nextNum = getNextUnencodedItemNumber();
-      document.getElementById('itemNumberInput').value = nextNum;
 
       renderSavedItemsLog();
       updateSummaryDashboard();
-      checkItemNumberLimitGuard();
+      persistState();
       switchWorkspaceTab('calculator', true);
       showToast(`Nasuri na ang lahat ng ${newRecords.length} aytem (P, D, PU/PL, r_pbis, Bistractor)!`, 'success');
     }
 
     /* ===================================================================== */
-    /* TAB 2: ITEM & DISTRACTOR CALCULATOR + PU/PL + BISTRACTOR + r_pbis     */
+    /* PSYCHOMETRIC CALCULATIONS (P, D, PU/PL & BISTRACTOR DIAGNOSTICS)       */
     /* ===================================================================== */
-    function getEffectiveTargetTotalItems() {
-      const metaK = parseInt(state.meta.totalItems, 10);
-      if (!isNaN(metaK) && metaK > 0) return metaK;
-      const keyLen = (state.encoder.answerKey || []).length;
-      if (keyLen > 0) return keyLen;
-      return (state.savedItems || []).length;
-    }
-
-    function getNextUnencodedItemNumber() {
-      const targetK = getEffectiveTargetTotalItems();
-      const existingNums = new Set((state.savedItems || []).map((it) => Number(it.itemNum)));
-      if (existingNums.size === 0) return 1;
-
-      const searchLimit = targetK > 0 ? targetK : Math.max(...existingNums) + 1;
-      for (let i = 1; i <= searchLimit; i++) {
-        if (!existingNums.has(i)) return i;
-      }
-      return Math.max(...existingNums) + 1;
-    }
-
-    function checkItemNumberLimitGuard() {
-      const inputEl = document.getElementById('itemNumberInput');
-      const guardBanner = document.getElementById('itemLimitGuardBanner');
-      const guardText = document.getElementById('itemLimitGuardText');
-      const nextBadge = document.getElementById('smartNextItemBadge');
-      if (!inputEl) return;
-
-      const targetK = parseInt(state.meta.totalItems, 10) || 0;
-      const nextNum = getNextUnencodedItemNumber();
-
-      if (nextBadge) {
-        nextBadge.textContent = targetK > 0
-          ? `Susunod na Aytem: #${nextNum} sa ${targetK}`
-          : `Susunod na Aytem: #${nextNum}`;
-      }
-
-      const currentItemNum = parseInt(inputEl.value, 10) || 0;
-      if (guardBanner && guardText) {
-        if (targetK > 0 && currentItemNum > targetK) {
-          guardBanner.classList.remove('hidden');
-          guardText.textContent = `Babala: Ang Aytem #${currentItemNum} ay lumampas sa itinakdang Kabuoang Bilang ng Aytem (K = ${targetK}).`;
-        } else {
-          guardBanner.classList.add('hidden');
-        }
-      }
-    }
-
-    function expandTotalItemsToCurrent() {
-      const currentItemNum = parseInt(document.getElementById('itemNumberInput').value, 10) || 0;
-      if (currentItemNum > 0) {
-        state.meta.totalItems = currentItemNum;
-        document.getElementById('metaTotalItems').value = currentItemNum;
-        document.getElementById('encoderTargetTotalItems').textContent = currentItemNum;
-        checkItemNumberLimitGuard();
-        gradeAndRankRoster();
-        updateSummaryDashboard();
-        persistState();
-        showToast(`Na-update ang Kabuoang Bilang ng Aytem sa K = ${currentItemNum}.`, 'success');
-      }
-    }
-
-    function getOptionsForCurrentItem() {
-      const type = state.currentItem.type || 'mc';
-      if (type === 'tf') return ['T', 'F'];
-      if (type === 'id') return ['Tama', 'Mali'];
-
-      const range = state.currentItem.optionRange || 'A-D';
-      const map = {
-        'A-C': ['A', 'B', 'C'],
-        'A-D': ['A', 'B', 'C', 'D'],
-        'A-E': ['A', 'B', 'C', 'D', 'E'],
-        'A-F': ['A', 'B', 'C', 'D', 'E', 'F']
-      };
-      return map[range] || ['A', 'B', 'C', 'D'];
-    }
-
-    function selectOptionRange(range) {
-      state.currentItem.optionRange = range;
-      ['A-C', 'A-D', 'A-E', 'A-F'].forEach((r) => {
-        const btn = document.getElementById(`rangeBtn_${r}`);
-        if (!btn) return;
-        btn.className = r === range
-          ? 'silky-btn py-2 squircle-sm text-xs font-mono font-extrabold border grad-select-pill on-gradient-text cursor-pointer'
-          : 'silky-btn py-2 squircle-sm text-xs font-mono font-extrabold border glass-subcard surface-text-secondary cursor-pointer';
-      });
-      renderOptionMatrixUI();
-      persistState();
-    }
-
-    function selectCorrectKey(opt) {
-      state.currentItem.correctKey = opt;
-      renderOptionMatrixUI();
-      persistState();
-    }
-
-    function renderOptionMatrixUI() {
-      const type = state.currentItem.type || 'mc';
-      const rangeContainer = document.getElementById('optionRangeContainer');
-      const keyContainer = document.getElementById('correctAnswerContainer');
-      const keyBtnsWrap = document.getElementById('correctKeyButtonsWrap');
-      const matrixContainer = document.getElementById('optionMatrixContainer');
-
-      const options = getOptionsForCurrentItem();
-      if (!options.includes(state.currentItem.correctKey)) {
-        state.currentItem.correctKey = options[0];
-      }
-
-      if (type === 'tf' || type === 'id') {
-        rangeContainer.classList.add('hidden');
-      } else {
-        rangeContainer.classList.remove('hidden');
-      }
-
-      if (type === 'id') {
-        keyContainer.classList.add('hidden');
-        state.currentItem.correctKey = 'Tama';
-      } else {
-        keyContainer.classList.remove('hidden');
-        keyBtnsWrap.innerHTML = options
-          .map((opt) => {
-            const isKey = opt === state.currentItem.correctKey;
-            const cls = isKey
-              ? 'silky-btn px-3.5 py-2 squircle-sm text-xs font-mono font-extrabold bg-emerald-600 text-white shadow cursor-pointer'
-              : 'silky-btn px-3.5 py-2 squircle-sm text-xs font-mono font-extrabold glass-subcard surface-text-primary hover:border-emerald-500/50 cursor-pointer';
-            return `<button type="button" onclick="selectCorrectKey('${opt}')" class="${cls}">${opt}</button>`;
-          })
-          .join('');
-      }
-
-      matrixContainer.innerHTML = options
-        .map((opt) => {
-          const isKey = opt === state.currentItem.correctKey;
-          const uVal = (state.currentItem.counts[opt] && state.currentItem.counts[opt].u) || '';
-          const lVal = (state.currentItem.counts[opt] && state.currentItem.counts[opt].l) || '';
-
-          const cardBorder = isKey
-            ? 'border-emerald-500/60 bg-emerald-500/5'
-            : 'border-slate-300/80 dark:border-slate-700/80';
-
-          const badge = isKey
-            ? '<span class="px-2 py-0.5 squircle-sm text-[10px] font-extrabold bg-emerald-600 text-white uppercase">Tamang Sagot</span>'
-            : '<span class="px-2 py-0.5 squircle-sm text-[10px] font-bold bg-slate-500/15 surface-text-secondary uppercase">Distractor</span>';
-
-          return `
-            <div class="glass-subcard squircle-control p-3.5 border ${cardBorder} space-y-2.5">
-              <div class="flex items-center justify-between gap-2">
-                <span class="font-mono font-black text-sm surface-text-primary">Opsyon ${escapeHtml(opt)}</span>
-                ${badge}
-              </div>
-              <div class="grid grid-cols-2 gap-2">
-                <div>
-                  <label class="block text-[10px] font-bold uppercase text-emerald-700 dark:text-emerald-400 mb-1">Upper (27%)</label>
-                  <input type="number" min="0" value="${uVal}" oninput="handleMatrixCountChange('${opt}', 'u', this.value)" placeholder="0" class="w-full px-2.5 py-1.5 squircle-sm bg-white/85 dark:bg-slate-900/85 border border-slate-300 dark:border-slate-700 surface-text-primary text-sm font-mono font-bold text-center outline-none focus:ring-2 focus:ring-emerald-500" />
-                </div>
-                <div>
-                  <label class="block text-[10px] font-bold uppercase text-rose-700 dark:text-rose-400 mb-1">Lower (27%)</label>
-                  <input type="number" min="0" value="${lVal}" oninput="handleMatrixCountChange('${opt}', 'l', this.value)" placeholder="0" class="w-full px-2.5 py-1.5 squircle-sm bg-white/85 dark:bg-slate-900/85 border border-slate-300 dark:border-slate-700 surface-text-primary text-sm font-mono font-bold text-center outline-none focus:ring-2 focus:ring-rose-500" />
-                </div>
-              </div>
-            </div>
-          `;
-        })
-        .join('');
-
-      recalculateLiveItemMetrics();
-    }
-
-    function handleMatrixCountChange(opt, group, rawVal) {
-      if (!state.currentItem.counts[opt]) {
-        state.currentItem.counts[opt] = { u: 0, l: 0 };
-      }
-      state.currentItem.counts[opt][group] = rawVal === '' ? 0 : Math.max(0, parseInt(rawVal, 10) || 0);
-      recalculateLiveItemMetrics();
-      persistState();
-    }
-
-    function clearCurrentMatrixInputs() {
-      state.currentItem.counts = {};
-      renderOptionMatrixUI();
-    }
-
     function interpretUpperLowerProportions(pU, pL) {
       let puShort = 'Katamtaman sa Upper Group';
       let puInterp = 'Katanggap-tanggap sa Upper Group, ngunit may ilang nangungunang mag-aaral ang nalito sa distractor.';
@@ -2916,9 +2876,10 @@
         const isKey = opt === correctKey;
         const optPu = u / n;
         const optPl = l / n;
-        const optDisc = optPu - optPl; // Distractor Discrimination Index (D_opt)
+        const optDisc = optPu - optPl;
 
         if (isKey) {
+          const isGoodKey = u > l && D >= 0.20;
           distractorDetails.push({
             opt,
             isKey: true,
@@ -2926,23 +2887,30 @@
             l,
             optDisc,
             isBistractorFlaw: false,
-            status: u > l ? 'Tamang Sagot (Positibong Diskriminasyon)' : 'Tamang Sagot (Mahinang Diskriminasyon)'
+            shortTag: isGoodKey ? 'Good Key' : (u <= l ? 'Flawed Key' : 'Weak Key'),
+            status: isGoodKey
+              ? 'Good Key (Mas maraming Upper ang nakatama)'
+              : (u <= l ? 'Flawed Key (Mas marami o pantay ang Lower!)' : 'Weak Key (Mahinang Diskriminasyon)')
           });
         } else {
           totalDistractors++;
           const totalChosen = u + l;
           const pctChosen = totalChosen / (2 * n);
           let status = 'Effective Distractor (Mas maraming Lower ang pumili)';
+          let shortTag = 'Effective Distractor';
           let isBistractorFlaw = false;
 
           if (totalChosen === 0 || pctChosen < 0.05) {
             status = 'Dead Distractor (< 5% ang pumili — Palitan)';
+            shortTag = 'Dead Distractor';
           } else if (u > l) {
             isBistractorFlaw = true;
             bistractorAlerts++;
             status = `Bistractor Flaw (D_opt = +${optDisc.toFixed(2)}: Mas maraming Upper ang naakit!)`;
+            shortTag = 'Bistractor Flaw';
           } else if (u === l && u > 0) {
             status = 'Neutral Distractor (Pantay ang Upper at Lower)';
+            shortTag = 'Neutral Distractor';
           } else {
             effectiveDistractors++;
           }
@@ -2954,6 +2922,7 @@
             l,
             optDisc,
             isBistractorFlaw,
+            shortTag,
             status
           });
         }
@@ -2990,170 +2959,10 @@
       };
     }
 
-    function recalculateLiveItemMetrics() {
-      const nGroup = Math.max(1, parseInt(document.getElementById('groupSizeNInput').value, 10) || 1);
-      const itemNum = parseInt(document.getElementById('itemNumberInput').value, 10) || 1;
-      const options = getOptionsForCurrentItem();
-      const rPbis = computePointBiserialForItem(itemNum - 1);
-
-      const metrics = computeItemPsychometrics(
-        state.currentItem.type,
-        state.currentItem.correctKey,
-        nGroup,
-        options,
-        state.currentItem.counts,
-        rPbis
-      );
-
-      document.getElementById('livePValue').textContent = metrics.P.toFixed(2);
-      document.getElementById('livePLabel').textContent = metrics.pLabel;
-      document.getElementById('liveDValue').textContent = metrics.D.toFixed(2);
-      document.getElementById('liveDLabel').textContent = metrics.dLabel;
-
-      document.getElementById('livePUValue').textContent = `${metrics.pU.toFixed(2)} (${Math.round(metrics.pU * 100)}%)`;
-      document.getElementById('livePUInterp').textContent = metrics.puInterp;
-      document.getElementById('livePLValue').textContent = `${metrics.pL.toFixed(2)} (${Math.round(metrics.pL * 100)}%)`;
-      document.getElementById('livePLInterp').textContent = metrics.plInterp;
-
-      document.getElementById('liveRUCount').textContent = `${metrics.ru} / ${nGroup}`;
-      document.getElementById('liveRLCount').textContent = `${metrics.rl} / ${nGroup}`;
-      document.getElementById('liveTwoNCount').textContent = nGroup * 2;
-      document.getElementById('liveRpbisValue').textContent = metrics.rPbis !== null ? metrics.rPbis.toFixed(2) : 'N/A';
-
-      const decBadge = document.getElementById('liveDecisionBadge');
-      decBadge.textContent = metrics.decision;
-      if (metrics.decision === 'RETAIN') {
-        decBadge.className = 'px-3 py-1 squircle-sm text-xs font-extrabold uppercase tracking-wider bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40';
-      } else if (metrics.decision === 'REVISE') {
-        decBadge.className = 'px-3 py-1 squircle-sm text-xs font-extrabold uppercase tracking-wider bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/40';
-      } else {
-        decBadge.className = 'px-3 py-1 squircle-sm text-xs font-extrabold uppercase tracking-wider bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/40';
-      }
-
-      const listWrap = document.getElementById('liveDistractorList');
-      listWrap.innerHTML = metrics.distractorDetails
-        .map((d) => {
-          const pillCls = d.isKey
-            ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border-emerald-500/40'
-            : d.isBistractorFlaw
-              ? 'bg-rose-500/15 text-rose-700 dark:text-rose-300 border-rose-500/40'
-              : d.status.startsWith('Effective')
-                ? 'bg-blue-500/15 text-blue-700 dark:text-blue-300 border-blue-500/40'
-                : 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border-amber-500/40';
-
-          const badgeLabel = d.isKey
-            ? 'KEY'
-            : d.isBistractorFlaw
-              ? 'BISTRACTOR'
-              : d.status.startsWith('Effective')
-                ? 'EPEKTIBO'
-                : 'SURIIN';
-
-          const dOptStr = d.isKey ? '' : ` • D_opt: ${d.optDisc >= 0 ? '+' : ''}${d.optDisc.toFixed(2)}`;
-
-          return `
-            <div class="glass-subcard squircle-sm p-2.5 flex items-center justify-between gap-2">
-              <div>
-                <span class="font-mono font-extrabold surface-text-primary">${escapeHtml(d.opt)}</span>
-                <span class="surface-text-muted ml-1.5 font-mono">(U:${d.u}, L:${d.l}${dOptStr})</span>
-                <span class="block text-[11px] surface-text-secondary mt-0.5">${escapeHtml(d.status)}</span>
-              </div>
-              <span class="px-2 py-0.5 squircle-sm text-[10px] font-extrabold border ${pillCls} shrink-0">
-                ${badgeLabel}
-              </span>
-            </div>
-          `;
-        })
-        .join('');
-    }
-
-    function saveCurrentItemAnalysis() {
-      const itemNum = parseInt(document.getElementById('itemNumberInput').value, 10);
-      if (isNaN(itemNum) || itemNum < 1) {
-        showToast('Maglagay ng wastong bilang ng Aytem (#1 pataas).', 'warning');
-        return;
-      }
-
-      const nGroup = Math.max(1, parseInt(document.getElementById('groupSizeNInput').value, 10) || 1);
-      const options = getOptionsForCurrentItem();
-      const countsCopy = {};
-      options.forEach((opt) => {
-        countsCopy[opt] = {
-          u: Number((state.currentItem.counts[opt] && state.currentItem.counts[opt].u) || 0),
-          l: Number((state.currentItem.counts[opt] && state.currentItem.counts[opt].l) || 0)
-        };
-      });
-
-      const rPbis = computePointBiserialForItem(itemNum - 1);
-      const metrics = computeItemPsychometrics(
-        state.currentItem.type,
-        state.currentItem.correctKey,
-        nGroup,
-        options,
-        countsCopy,
-        rPbis
-      );
-
-      commitItemRecord({
-        itemNum,
-        type: state.currentItem.type,
-        correctKey: state.currentItem.correctKey,
-        nGroup,
-        options,
-        counts: countsCopy,
-        ...metrics
-      });
-    }
-
-    function commitItemRecord(record) {
-      const existingIdx = state.savedItems.findIndex((x) => x.itemNum === record.itemNum);
-      if (existingIdx !== -1) {
-        state.savedItems[existingIdx] = record;
-      } else {
-        state.savedItems.push(record);
-      }
-
-      state.savedItems.sort((a, b) => a.itemNum - b.itemNum);
-
-      const nextUnencoded = getNextUnencodedItemNumber();
-      document.getElementById('itemNumberInput').value = nextUnencoded;
-      if (state.meta.formatMode === 'mixed') {
-        applyMixedRangeTypeForItem(nextUnencoded);
-      }
-      clearCurrentMatrixInputs();
-
-      renderSavedItemsLog();
-      updateSummaryDashboard();
-      checkItemNumberLimitGuard();
-      persistState();
-      showToast(`Na-save ang Aytem #${record.itemNum} sa talaan!`, 'success');
-    }
-
-    function editSavedItem(itemNum) {
-      const item = state.savedItems.find((x) => x.itemNum === itemNum);
-      if (!item) return;
-
-      document.getElementById('itemNumberInput').value = item.itemNum;
-      document.getElementById('groupSizeNInput').value = item.nGroup;
-
-      if (state.meta.formatMode === 'mixed') {
-        state.currentItem.type = item.type;
-      }
-      state.currentItem.correctKey = item.correctKey;
-      state.currentItem.counts = JSON.parse(JSON.stringify(item.counts || {}));
-
-      updateItemTypeButtonsUI();
-      renderOptionMatrixUI();
-      checkItemNumberLimitGuard();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      showToast(`Inilagay sa editor ang Aytem #${itemNum}.`, 'info');
-    }
-
     function deleteSavedItem(itemNum) {
       state.savedItems = state.savedItems.filter((x) => x.itemNum !== itemNum);
       renderSavedItemsLog();
       updateSummaryDashboard();
-      checkItemNumberLimitGuard();
       persistState();
       showToast(`Tinanggal ang Aytem #${itemNum} sa talaan.`, 'info');
     }
@@ -3165,7 +2974,7 @@
       if (items.length === 0) {
         tbody.innerHTML = `
           <tr>
-            <td colspan="11" class="p-6 text-center surface-text-muted italic">Wala pang naka-save na aytem sa talaan.</td>
+            <td colspan="11" class="p-6 text-center surface-text-muted italic">Wala pang naka-save na aytem sa talaan. I-click ang "I-analyze Lahat ng Aytem &rarr; Tab 2" sa Tab 1.</td>
           </tr>
         `;
         return;
@@ -3187,10 +2996,10 @@
           const rPbisStr = typeof it.rPbis === 'number' && !isNaN(it.rPbis) ? it.rPbis.toFixed(2) : '—';
 
           const decBadge = it.decision === 'RETAIN'
-            ? '<span class="px-2.5 py-1 squircle-sm text-[11px] font-extrabold bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40">RETAIN</span>'
+            ? '<span class="squircle-badge-adaptive text-[11px] font-extrabold bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40">RETAIN</span>'
             : it.decision === 'REVISE'
-              ? '<span class="px-2.5 py-1 squircle-sm text-[11px] font-extrabold bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/40">REVISE</span>'
-              : '<span class="px-2.5 py-1 squircle-sm text-[11px] font-extrabold bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/40">DISCARD</span>';
+              ? '<span class="squircle-badge-adaptive text-[11px] font-extrabold bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/40">REVISE</span>'
+              : '<span class="squircle-badge-adaptive text-[11px] font-extrabold bg-rose-500/15 text-rose-700 dark:text-rose-300 border border-rose-500/40">DISCARD</span>';
 
           return `
             <tr class="hover:bg-white/40 dark:hover:bg-slate-800/40 transition-colors">
@@ -3199,10 +3008,11 @@
               <td class="p-3 font-mono font-extrabold text-emerald-700 dark:text-emerald-400">${escapeHtml(it.correctKey)}</td>
               <td class="p-3 font-mono text-xs surface-text-primary">${it.ru} / ${it.rl} <span class="surface-text-muted">(n=${it.nGroup})</span></td>
               <td class="p-3 font-mono text-xs">
-                <span class="font-bold text-emerald-700 dark:text-emerald-300">P<sub>U</sub>: ${pU.toFixed(2)}</span>
-                <span class="mx-1 surface-text-muted">|</span>
-                <span class="font-bold text-rose-700 dark:text-rose-300">P<sub>L</sub>: ${pL.toFixed(2)}</span>
-                <span class="block text-[10px] font-sans surface-text-muted mt-0.5">${escapeHtml(puPlInfo.puShort)} • ${escapeHtml(puPlInfo.plShort)}</span>
+                <span class="squircle-badge-adaptive bg-slate-500/10 border border-slate-300 dark:border-slate-700">
+                  <span class="font-bold text-emerald-700 dark:text-emerald-300">P<sub>U</sub>: ${pU.toFixed(2)}</span>
+                  <span class="font-bold text-rose-700 dark:text-rose-300 mt-0.5">P<sub>L</sub>: ${pL.toFixed(2)}</span>
+                </span>
+                <span class="block text-[10px] font-sans surface-text-muted mt-1">${escapeHtml(puPlInfo.puShort)} • ${escapeHtml(puPlInfo.plShort)}</span>
               </td>
               <td class="p-3 font-mono font-bold text-indigo-700 dark:text-indigo-300">${it.P.toFixed(2)} <span class="block text-[10px] font-sans font-normal surface-text-muted">${it.pLabel}</span></td>
               <td class="p-3 font-mono font-bold ${it.D < 0.20 ? 'text-rose-600 dark:text-rose-400' : 'text-teal-700 dark:text-teal-300'}">${it.D.toFixed(2)} <span class="block text-[10px] font-sans font-normal surface-text-muted">${it.dLabel}</span></td>
@@ -3212,9 +3022,6 @@
               <td class="p-3 text-right whitespace-nowrap no-print">
                 <button type="button" onclick="inspectItemInCharts(${it.itemNum})" class="silky-btn p-1.5 squircle-sm text-indigo-600 dark:text-indigo-400 hover:bg-indigo-500/15 cursor-pointer" title="Tingnan sa Charts">
                   <i class="fa-solid fa-chart-column"></i>
-                </button>
-                <button type="button" onclick="editSavedItem(${it.itemNum})" class="silky-btn p-1.5 squircle-sm text-amber-600 dark:text-amber-400 hover:bg-amber-500/15 cursor-pointer" title="I-edit ang Aytem">
-                  <i class="fa-solid fa-pen-to-square"></i>
                 </button>
                 <button type="button" onclick="deleteSavedItem(${it.itemNum})" class="silky-btn p-1.5 squircle-sm text-rose-600 dark:text-rose-400 hover:bg-rose-500/15 cursor-pointer" title="Tanggalin">
                   <i class="fa-solid fa-trash-can"></i>
@@ -3288,6 +3095,33 @@
         borderClass: 'border-l-rose-500',
         meaning: 'Mababa ang internal consistency ng pagsusulit. Malaki ang posibilidad na naapektuhan ng panghuhula (guessing) o malabong mga pagpipilian ang marka ng mga mag-aaral.',
         action: 'Inirerekomendang baguhin ang mga tanong na may mababang diskriminasyon, tiyakin ang tamang Answer Key, at iayon muli ang pagsusulit sa Table of Specifications (TOS).'
+      };
+    }
+
+    function interpretSemPrecision(sem, numItems) {
+      if (sem === null || isNaN(sem) || numItems <= 0) {
+        return {
+          badge: 'SEM: —',
+          text: 'Ang SEM ay nagsasaad ng inaasahang lawak ng paglihis (margin of error sa puntos) sa tunay na kakayahan (True Score) ng mag-aaral. Mas maliit na SEM, mas eksakto at maaasahan ang iskor.'
+        };
+      }
+      const pctOfK = (sem / numItems) * 100;
+      const ci95 = (1.96 * sem).toFixed(2);
+      if (pctOfK <= 5) {
+        return {
+          badge: `±${sem.toFixed(2)} pts (${pctOfK.toFixed(1)}% ng K) • Napakatumpak`,
+          text: `Napakaliit ng margin of error (SEM = ±${sem.toFixed(2)} puntos o ${pctOfK.toFixed(1)}% lamang ng ${numItems} aytem). Ibig sabihin, ang nakuhang iskor ng mag-aaral ay nasa loob ng ±${sem.toFixed(2)} puntos (68% confidence) o ±${ci95} puntos (95% confidence) mula sa kanilang tunay na kakayahan.`
+        };
+      }
+      if (pctOfK <= 8) {
+        return {
+          badge: `±${sem.toFixed(2)} pts (${pctOfK.toFixed(1)}% ng K) • Katanggap-tanggap`,
+          text: `Katanggap-tanggap ang lawak ng error (SEM = ±${sem.toFixed(2)} puntos o ${pctOfK.toFixed(1)}% ng ${numItems} aytem). Ang tunay na iskor ng mag-aaral ay inaasahang naglalaro sa ±${sem.toFixed(2)} puntos (68% confidence) mula sa kanilang naitalang marka.`
+        };
+      }
+      return {
+        badge: `±${sem.toFixed(2)} pts (${pctOfK.toFixed(1)}% ng K) • Malawak ang Error`,
+        text: `Medyo malawak ang error band (SEM = ±${sem.toFixed(2)} puntos o ${pctOfK.toFixed(1)}% ng ${numItems} aytem). Maaaring magbago ng ±${sem.toFixed(2)} hanggang ±${ci95} puntos ang marka kung uulitin ang pagsusulit; magdagdag ng malilinaw na aytem upang paliitin ang SEM.`
       };
     }
 
@@ -3459,6 +3293,8 @@
       const ratingPillEl = document.getElementById('interpReliabilityRatingPill');
       const meaningEl = document.getElementById('interpReliabilityMeaningText');
       const actionEl = document.getElementById('interpReliabilityActionText');
+      const semQualityBadge = document.getElementById('interpSemQualityBadge');
+      const semMeaningEl = document.getElementById('interpSemMeaningText');
 
       if (!card) return;
 
@@ -3467,6 +3303,10 @@
         basisSubEl.textContent = rel.basisText;
       }
       card.className = `glass-panel squircle-card p-5 sm:p-6 border-l-4 ${rel.borderClass} space-y-4`;
+
+      const semInfo = interpretSemPrecision(rel.sem, rel.kEncoded || rel.targetK || 0);
+      if (semQualityBadge) semQualityBadge.textContent = semInfo.badge;
+      if (semMeaningEl) semMeaningEl.textContent = semInfo.text;
 
       if (rel.value === null) {
         scorePillEl.textContent = 'r = —';
@@ -3659,6 +3499,55 @@
       renderStandaloneDistractorChart();
     }
 
+    function getOptionChoiceClassification(item, opt, u, l, nGroup) {
+      const isKey = opt === item.correctKey;
+      const dOpt = (u / nGroup) - (l / nGroup);
+      const totalChosen = u + l;
+      const pctChosen = totalChosen / (2 * nGroup);
+
+      if (isKey) {
+        if (u > l && item.D >= 0.20) {
+          return {
+            tag: 'Good Key',
+            tagClass: 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border-emerald-500/40'
+          };
+        }
+        if (u <= l) {
+          return {
+            tag: 'Flawed Key',
+            tagClass: 'bg-rose-500/15 text-rose-700 dark:text-rose-300 border-rose-500/40'
+          };
+        }
+        return {
+          tag: 'Weak Key',
+          tagClass: 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border-amber-500/40'
+        };
+      }
+
+      if (totalChosen === 0 || pctChosen < 0.05) {
+        return {
+          tag: 'Dead Distractor',
+          tagClass: 'bg-slate-500/15 text-slate-700 dark:text-slate-300 border-slate-400/40'
+        };
+      }
+      if (u > l) {
+        return {
+          tag: 'Bistractor Flaw',
+          tagClass: 'bg-rose-500/15 text-rose-700 dark:text-rose-300 border-rose-500/45'
+        };
+      }
+      if (u === l && u > 0) {
+        return {
+          tag: 'Neutral Distractor',
+          tagClass: 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border-amber-500/40'
+        };
+      }
+      return {
+        tag: 'Effective Distractor',
+        tagClass: 'bg-teal-500/15 text-teal-700 dark:text-teal-300 border-teal-500/40'
+      };
+    }
+
     function renderStandaloneDistractorChart() {
       const select = document.getElementById('standaloneChartItemSelect');
       const plotArea = document.getElementById('standaloneDistractorPlotArea');
@@ -3708,6 +3597,7 @@
           const uPct = Math.min(100, Math.round((u / nGroup) * 100));
           const lPct = Math.min(100, Math.round((l / nGroup) * 100));
           const dOpt = (u / nGroup) - (l / nGroup);
+          const choiceClassInfo = getOptionChoiceClassification(item, opt, u, l, nGroup);
 
           const optBadge = isKey
             ? 'bg-amber-500 text-slate-950 font-black border-amber-600'
@@ -3716,7 +3606,7 @@
               : 'bg-slate-200/80 dark:bg-slate-800 surface-text-primary border-slate-400/40 font-extrabold';
 
           return `
-            <div class="flex-1 min-w-[82px] max-w-[140px] flex flex-col items-center">
+            <div class="flex-1 min-w-[104px] max-w-[156px] flex flex-col items-center">
               <div class="w-full h-44 flex items-end justify-center gap-2 px-2 border-b-2 border-slate-300 dark:border-slate-700">
                 <div class="flex flex-col items-center w-6 sm:w-8 h-full justify-end">
                   <span class="text-[11px] font-mono font-extrabold text-emerald-700 dark:text-emerald-300 mb-1">${u}</span>
@@ -3730,8 +3620,11 @@
               <span class="mt-2 px-3 py-1 squircle-sm text-xs font-mono border ${optBadge}">
                 ${escapeHtml(opt)}${isKey ? ' ★' : ''}
               </span>
+              <span class="mt-1.5 squircle-badge-adaptive text-[10px] font-extrabold border ${choiceClassInfo.tagClass}">
+                ${escapeHtml(choiceClassInfo.tag)}
+              </span>
               <span class="mt-1 text-[10px] font-mono surface-text-muted">
-                ${isKey ? `Kabuuan: ${u + l}` : `D_opt: ${dOpt >= 0 ? '+' : ''}${dOpt.toFixed(2)}`}
+                ${isKey ? `Kabuuan: ${u + l} • D: ${dOpt >= 0 ? '+' : ''}${dOpt.toFixed(2)}` : `D_opt: ${dOpt >= 0 ? '+' : ''}${dOpt.toFixed(2)}`}
               </span>
             </div>
           `;
@@ -3739,20 +3632,19 @@
         .join('');
 
       plotArea.innerHTML = `
-        <div class="w-full p-4 squircle-control bg-slate-900/[0.03] dark:bg-slate-950/45 border border-slate-300/80 dark:border-slate-800 flex items-end justify-center gap-3 sm:gap-6 overflow-x-auto">
+        <div class="w-full p-4 squircle-control bg-slate-900/[0.03] dark:bg-slate-950/45 border border-slate-300/80 dark:border-slate-800 flex items-end justify-center gap-3 sm:gap-5 overflow-x-auto">
           ${colsHTML}
         </div>
       `;
 
       if (insightBox && insightText) {
         insightBox.classList.remove('hidden');
-        insightText.innerHTML = `<strong>Buod ng Distractor at Bistractor (Aytem #${item.itemNum}):</strong> ${escapeHtml(item.distractorSummary)}. Ang negatibong D<sub>opt</sub> (&lt; 0.00) sa mga maling opsyon ay nagpapakitang mas naakit nito ang Lower Group kaysa Upper Group.`;
+        insightText.innerHTML = `<strong>Buod ng Key, Distractor at Bistractor (Aytem #${item.itemNum}):</strong> ${escapeHtml(item.distractorSummary)}. Ang <strong>Good Key</strong> ay may positibong diskriminasyon (U &gt; L), habang ang <strong>Effective Distractor</strong> ay may negatibong D<sub>opt</sub> (&lt; 0.00) na nagpapakitang mas naakit nito ang Lower Group kaysa Upper Group.`;
       }
     }
 
     /* ===================================================================== */
     /* STANDALONE ITEM CHART (DIFFICULTY P, DISCRIMINATION D & r_pbis)       */
-    /* Clean Reference Lines Inside Plot + Legend Above (Zero Line Overlap)  */
     /* ===================================================================== */
     function setItemChartViewMode(mode) {
       state.itemChartMode = mode === 'all' ? 'all' : 'single';
@@ -3873,7 +3765,7 @@
                 <span class="text-xs sm:text-sm font-mono font-black ${rPbisRaw < 0 ? 'text-rose-600 dark:text-rose-400' : 'text-cyan-700 dark:text-cyan-300'} mb-1.5">${rPbisRaw.toFixed(2)}</span>
                 <div style="height: ${Math.max(rPbisPct, rPbisRaw !== 0 ? 6 : 2)}%" class="silky-bar w-full squircle-control grad-bar-rpbis shadow"></div>
               </div>
-              <span class="mt-2.5 text-xs font-extrabold surface-text-primary">Point-Biserial (r<sub>pbis</sub>)</span>
+              <span class="mt-2.5 text-xs font-extrabold surface-text-primary text-center">Point-Biserial (r<sub>pbis</sub>)</span>
               <span class="text-[11px] surface-text-muted">${rPbisRaw >= 0.25 ? 'Katanggap-tanggap' : 'Mahina'}</span>
             </div>
           `
@@ -3888,8 +3780,8 @@
                   <span class="text-xs sm:text-sm font-mono font-black text-indigo-700 dark:text-indigo-300 mb-1.5">${pVal.toFixed(2)} (${pPct}%)</span>
                   <div style="height: ${Math.max(pPct, pVal > 0 ? 6 : 2)}%" class="silky-bar w-full squircle-control grad-bar-p shadow"></div>
                 </div>
-                <span class="mt-2.5 text-xs font-extrabold surface-text-primary">Difficulty Index (P)</span>
-                <span class="text-[11px] surface-text-muted">${it.pLabel}</span>
+                <span class="mt-2.5 text-xs font-extrabold surface-text-primary text-center">Difficulty Index (P)</span>
+                <span class="text-[11px] surface-text-muted text-center">${it.pLabel}</span>
               </div>
 
               <div class="flex flex-col items-center w-24 sm:w-32 z-10">
@@ -3897,8 +3789,8 @@
                   <span class="text-xs sm:text-sm font-mono font-black ${dRaw < 0 ? 'text-rose-600 dark:text-rose-400' : 'surface-text-primary'} mb-1.5">${dRaw.toFixed(2)}</span>
                   <div style="height: ${Math.max(dPct, dRaw !== 0 ? 6 : 2)}%" class="silky-bar w-full squircle-control ${dBarClass} shadow"></div>
                 </div>
-                <span class="mt-2.5 text-xs font-extrabold surface-text-primary">Discrimination (D)</span>
-                <span class="text-[11px] surface-text-muted">${it.dLabel}</span>
+                <span class="mt-2.5 text-xs font-extrabold surface-text-primary text-center">Discrimination (D)</span>
+                <span class="text-[11px] surface-text-muted text-center">${it.dLabel}</span>
               </div>
 
               ${rPbisColHTML}
@@ -4233,10 +4125,8 @@
         renderAnswerKeyPreview();
         gradeAndRankRoster();
         renderMixedPartsList();
-        renderOptionMatrixUI();
         renderSavedItemsLog();
         updateSummaryDashboard();
-        checkItemNumberLimitGuard();
         switchWorkspaceTab(state.activeTab || 'encoder', false);
       } catch (err) {
         console.error('Initialization error:', err);
